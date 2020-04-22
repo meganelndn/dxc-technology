@@ -1,10 +1,8 @@
-# dxc-technology
-
 # An Optimized Flow
 Mandatory Assignment, Front End Elective Spring 2020
 
 # The Case
-# About the client
+- About the client
 DXC Technology is an American multinational Fortune 500 company with more than 140,000 employees worldwide and a 2019 revenue of 21 billion USD. The company was established two years ago with the merger of CSC & HP Enterprise.
 
 DXC provides B2B IT services, they modernize IT, optimize data architectures, and make everything secure, scalable and orchestrated across public, private and hybrid clouds. DXC helps companies both to run their business and change their business. We provide all companies need to modernize their technology stack to drive operational efficiency, solve business problems and deliver innovative products, services and experiences.

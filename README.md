@@ -81,7 +81,7 @@ Company websites
 - DXC Eclipse Nordic: https://www.dxc.technology/dk/ahp/148089-dxc_eclipse_nordic
 
 - Styleguide
-dxc_styleguide_170224.pdf
+  dxc_styleguide_170224.pdf
 
 - English Assets
 6_Success_factors_for_IIoT_in_Manufacturing.pdf 

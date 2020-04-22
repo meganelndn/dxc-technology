@@ -77,22 +77,22 @@ You must hand in as a group
 
 # Resources
 Company websites
-DXC Global: https://www.dxc.technology/
-DXC Eclipse Nordic: https://www.dxc.technology/dk/ahp/148089-dxc_eclipse_nordic
+- DXC Global: https://www.dxc.technology/
+- DXC Eclipse Nordic: https://www.dxc.technology/dk/ahp/148089-dxc_eclipse_nordic
 
-Styleguide
+- Styleguide
 dxc_styleguide_170224.pdf
 
-English Assets
-6_Success_factors_for_IIoT_in_Manufacturing.pdf
+- English Assets
+6_Success_factors_for_IIoT_in_Manufacturing.pdf 
 08_BR _D365BC vs NAV_EN.pdf
 52_FS_BI_ENG.pdf
 90_SO_Global_Data_Management_ENG.pdf
 
-Danish Assets
+- Danish Assets
 01_BR_Succes med outsourcing_del1_DK.pdf
 
-Media kit
+- Media kit
 Newsroom, Social Media, and Analyst Ratings
 
 

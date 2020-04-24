@@ -1,0 +1,24 @@
+{
+  "name": "dxc-technology",
+  "version": "1.0.0",
+  "description": "Mandatory Assignment, Front End Elective Spring 2020",
+  "main": "script.js",
+  "scripts": {
+    "start": "parcel *.html --open",
+    "build": "parcel build *.html --public-url ./"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/meganelndn/dxc-technology.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/meganelndn/dxc-technology/issues"
+  },
+  "homepage": "https://github.com/meganelndn/dxc-technology#readme",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4"
+  }
+}

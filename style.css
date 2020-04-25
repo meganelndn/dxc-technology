@@ -1,0 +1,15 @@
+input{
+    display: block;
+}
+
+.invalid {
+    border: 2px solid pink;
+}
+
+input + p {
+    display: none;
+}
+
+input.invalid + p {
+    display: block;
+}

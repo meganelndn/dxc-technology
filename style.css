@@ -1,10 +1,147 @@
+/* ---------------------------------fonts------------------------------------- */
+
+@font-face {
+    font-family: "DxcRegular";
+    src: url("fonts/GT-Walsheim-Pro-Regular.woff2") format('woff');
+}
+
+@font-face {
+    font-family: "DxcBold";
+    src: url("fonts/GT-Walsheim-Pro-Bold.woff2") format('woff');
+}
+
+/* ---------------------------------overall------------------------------------- */
+
+body {
+    margin: 0;
+}
+/* ---------------------------------cover Image-------------------------------------- */
+
+.coverImage {
+    background-image: linear-gradient(to left, rgba(0,0,0,0) 15%, rgba(128,128,128,0) 20%, rgba(0,0,0,0.9)70%), url("images/city-network-tech.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 800px;
+    width: auto;
+    position: relative;
+    /*filter: grayscale(100%);*/
+}
+
+.coverButton {
+    color: #ffed00;
+    position: absolute;
+    text-decoration: none;
+    font-size: 16px;
+    padding: 18px 28px;
+    border: solid 1px #ffed00;
+    top: 80%;
+    left: 15%;
+    transform: translate(-50%, -50%);
+    font-family: DxcBold;
+    letter-spacing: 2px;
+}
+
+.coverText {
+    color: white;
+    position: absolute;
+    font-family: DxcRegular;
+    font-size: 24px;
+    left: 5%;
+    top: 30%;
+    right: 70%;
+}
+a.coverButton:hover {
+    color: black;
+    border: solid 1px #ffed00;
+    background-color: #ffed00;
+}
+/* --------------------------------- menu-------------------------------------- */
+
+.topMenu{
+    list-style-type: none;
+    margin: 0;
+    overflow: hidden;
+    background-color: black;
+    z-index: 1000;
+    opacity: 0.8;
+    position: fixed;
+    width: 100%;
+}
+
+.logoActive{
+    float: left;
+    background-image: url(images/dxc_logo.JPG);
+    width: 200px;
+    height: auto;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 30px;
+}
+
+.assetLink{
+    float: right;
+    background-color: black;
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 20px 16px;
+    text-decoration: none;
+    color: #00C9FF;
+    border-bottom: solid 4px #00C9FF;
+    font-family: DxcRegular;
+    letter-spacing: 2px;
+ 
+}
+/* ---------------------------------Landing page-------------------------------------- */
+.mainContent{
+    height: 500px;
+}
+
+/* ---------------------------------partners-------------------------------------- */
+
+.partners {
+    display: flex;
+    justify-content: space-around;
+ 
+}
+
+.partnerImage{
+    height: 80px;
+    width: auto;
+    padding: 20px 16px;
+}
+
+.partnerImage:first-child:hover {
+    border-bottom: solid 4px #d2303a;
+}
+
+.partnerImage:nth-child(2):hover {
+    border-bottom: solid 4px #2373ba;
+}
+
+.partnerImage:nth-child(3):hover {
+    border-bottom: solid 4px #F1C911;
+}
+
+/* ---------------------------------FORM-------------------------------------- */
+
 input{
     display: block;
+    font-family: DxcRegular; 
+}
+
+input,
+select{
+    font-size: 1.25rem;
+    width: 15em;
 }
 
 .invalid {
-    border: 2px solid pink;
+    border: 10px solid pink;
 }
+
 
 input + p {
     display: none;
@@ -12,4 +149,257 @@ input + p {
 
 input.invalid + p {
     display: block;
+    color: white;
 }
+
+input:focus,
+textarea:focus {
+    background-color: whitesmoke;
+}
+
+form{
+    justify-content: center;
+    display: grid;
+    font-family: DxcRegular;
+    padding: 200px;
+}
+
+form input {
+    margin-bottom: 1.5rem;
+}
+
+label {
+    cursor: pointer;
+}
+
+#formSection{
+    background-color: black;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    padding: 100px;
+}
+
+form label{
+    color: white;
+}
+
+.formSubmit {
+    color: #ffed00;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: solid 1px #ffed00;
+    background-color: black;
+    letter-spacing: 2px;
+    font-family: DxcBold;
+}
+
+.formSubmit:hover {
+    color: black;
+    border: solid 1px #ffed00;
+    background-color: #ffed00;
+}
+
+
+/* ---------------------------------RESPONSIVE-------------------------------------- */
+/* For tablets: */
+@media only screen and (min-device-width: 768px) 
+and (max-device-width: 1024px)
+and (-webkit-min-device-pixel-ratio: 1) {
+  .coverImage {
+      height: 500px;
+  }
+  .coverText {
+      font-size: 20px;
+      right: 40%;
+      top: 20%;
+      margin-left: 50px;
+  }
+  .coverButton {
+      left: 25%;
+  }
+  .assetLink {
+      letter-spacing: 0;
+  }
+  .partnerImage {
+      height: 50px;
+  }
+}
+
+
+/* Portrait Mobile */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: portrait) {
+      .coverImage {
+          height: 500px;
+      }
+      .coverText {
+        right: 0;
+        font-size: 16px;
+        margin: 30px;
+      }
+      .coverButton {
+          left: 50%;
+      }
+      .partnerImage {
+          height: 40px;
+      }
+      .partners {
+        display: grid;
+        justify-content: center;
+        justify-items: center;
+    }
+    #formSection {
+        display: list-item;
+        padding: 0;
+    }
+
+}
+
+/* Landscape Mobile*/
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 780px)
+  and (-webkit-min-device-pixel-ratio: 2)
+  and (orientation: landscape) {
+    .coverImage {
+        height: 300px;
+    }
+    .coverText {
+        font-size: 18px;
+        left: 15%;
+        top: 0%;
+        right: 0%;
+    }
+    .coverButton {
+        left: 50%;
+    }
+}
+
+
+/*---------------------------FOOTER ----------------------------------*/
+/********************COPIED- EDIT!!*/
+/*************https://codepen.io/om-10/pen/abvvBxR*************/
+
+/* FOOTER */
+.footer {
+	width: 100%;
+	background: #171717;
+    display: block;
+    font-family: "DxcRegular";
+ }
+
+ .inner-footer {
+	 width: 95%;
+	 margin: auto;
+	 padding: 30px 10px;
+	 display: flex;
+	 flex-wrap: wrap;
+	 box-sizing: border-box;
+	 justify-content: center;
+ }
+
+.footer-items {
+	width: 25%;
+	padding: 10px 20px;
+	box-sizing: border-box;
+	color: #fff;
+}
+
+.footer-items p {
+	font-size: 16px;
+	text-align: justify;
+	line-height: 25px;
+	color: #fff;
+}
+
+.footer-items h1 {
+	color: #fff;
+}
+
+.border1 {
+	height: 3px;
+	width: 40px;
+	background: #00C9FF;
+	color: #00C9FF;
+	background-color: #00C9FF;
+	border: 0px;
+}
+
+ul {
+	list-style: none;
+	color: #fff;
+	font-size: 15px;
+	letter-spacing: 0.5px;	
+ }
+
+ul a {
+	text-decoration: none;
+	outline: none;
+	color: #fff;
+	transition: 0.3s;
+}
+
+ul a:hover {
+	color: #00C9FF;
+}
+
+
+li i {
+	margin-right: 20px;
+}
+
+.social-media {
+	width: 100%;
+	color: #fff;
+	text-align: center;
+	font-size: 20px;
+}
+
+.social-media a {
+	text-decoration: none;
+}
+
+.social-media i {
+	height: 25px;
+	width: 25px;
+	margin: 20px 10px;
+	padding: 4px;
+	color: #fff;
+	transition: 0.5s;
+}
+
+.social-media i:hover {
+	transform: scale(1.5);
+}
+
+.footer-bottom {
+	padding: 10px;
+	background: #1F2020;
+	color: #fff;
+	font-size: 12px;
+	text-align: center;
+}
+
+/* for tablet mode view */
+
+@media screen and (max-width: 1275px) {
+	.footer-items {
+		width: 50%;
+	}
+}
+
+/* for mobile screen view */
+
+@media screen and (max-width: 660px) {
+	.footer-items {
+		width: 100%;
+	}
+}
+
+/* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
+
+/* Thanks to Computer Conversations */

@@ -28,7 +28,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 800px;
+    height: 825px;
     width: auto;
     position: relative;
     /*filter: grayscale(100%);*/
@@ -97,21 +97,21 @@ a.coverButton:hover {
     background-repeat: no-repeat;
     background-position: center;
     padding: 30px;
+    margin: 22px 0 15px 40px;
 }
 
 .assetLink {
     float: right;
     background-color: black;
     display: block;
-    color: white;
     text-align: center;
-    padding: 20px 16px;
+    padding: 30px 16px;
     text-decoration: none;
     color: #00C9FF;
     border-bottom: solid 4px #00C9FF;
     font-family: DxcRegular;
-    letter-spacing: 2px;
-
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 /* ---------------------------------Landing page-------------------------------------- */

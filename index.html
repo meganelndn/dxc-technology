@@ -14,8 +14,6 @@
 
 <body>
 
-
-
   <div class="coverImage">
     <header>
       <div class="topMenu">
@@ -56,33 +54,46 @@
     </div>
 
     <div class="partners">
-      <img src="images/sql-server.png" alt="" class="partnerImage">
-      <img src="images/fecd48986a_3fa1480c5f.png" alt="" class="partnerImage">
-      <img src="images/powerBi_white.png" alt="" class="partnerImage">
+      <img src="images/sql-server.png" alt="sql-server" class="partnerImage">
+      <img src="images/fecd48986a_3fa1480c5f.png" alt="microsoft-azure" class="partnerImage">
+      <img src="images/powerBi_white.png" alt="power-bi" class="partnerImage">
     </div>
 
     <section id="formSection">
+
       <form>
-        <label for="fullName">Full Name</label>
-        <input type="text" name="fullName" required>
+        <h1>Fill out to learn more</h1>
+
+        <label for="fullName">
+          Full Name
+        </label>
+        <input type="text" name="fullName" placeholder="ex. John Smith" required>
         <p>Full Name required</p>
 
-        <label for="email">E-mail</label>
-        <input type="email" name="email" placeholder="your@emailAdress.com" required>
-        <p>Email required</p>
+        <label for="email">
+          Work E-mail
+        </label>
+        <input type="email" name="email" placeholder="ex. johnsmith@maersk.dk" required>
+        <p>Work e-mail required</p>
 
-        <label for="country">Country</label>
-        <input type="text" name="country" required>
+        <label for="country">
+          Country
+        </label>
+        <input type="text" name="country" placeholder="ex. Denmark" required>
         <p>Country required</p>
 
-        <label for="jobTitle">Job Title</label>
-        <input type="text" name="jobTitle" required>
+        <label for="jobTitle">
+          Job Title
+        </label>
+        <input type="text" name="jobTitle" placeholder="ex. CEO" required>
         <p>Job Title required</p>
 
         <input type="submit" value="Submit" class="formSubmit">
       </form>
 
-      <div class="formImage"></div>
+      <div class="formImage">
+      </div>
+
     </section>
 
 
@@ -102,13 +113,13 @@
           <p>Investor Relations</p>
           <p>Careers</p>
 
-          <a href="https://www.facebook.com/DXCTechnology/">
+          <a href="https://www.facebook.com/DXCTechnology/" target="_blank">
             <img class="facebookIcon" src="icons/facebook.png" alt="facebook">
           </a>
-          <a href="https://twitter.com/DXCTechnology">
+          <a href="https://twitter.com/DXCTechnology" target="_blank">
             <img class="twitterIcon" src="icons/twitter.png" alt="twitter">
           </a>
-          <a href="https://www.linkedin.com/company/dxctechnology/">
+          <a href="https://www.linkedin.com/company/dxctechnology/" target="_blank">
             <img class="linkedinIcon" src="icons/linkedin.png" alt="linkedin">
           </a>
         </div>
@@ -202,12 +213,6 @@
               </a>
             </ul>
 
-            <!--   for social links -->
-            <!-- <div class="social-media">
-              <a href="#"><i class="fab fa-instagram"></i></a>
-              <a href="#"><i class="fab fa-facebook"></i></a>
-              <a href="#"><i class="fab fa-google-plus-square"></i></a>
-            </div> -->
           </div>
       </div>
 

@@ -155,22 +155,28 @@ svg {
 .partnerImage {
     height: 80px;
     width: auto;
-    padding: 20px 16px;
+    padding: 30px 16px;
 }
 
 .partnerImage:first-child:hover {
-    border-bottom: solid 4px #d2303a;
+    border-bottom: solid 6px #d2303a;
 }
 
 .partnerImage:nth-child(2):hover {
-    border-bottom: solid 4px #2373ba;
+    border-bottom: solid 6px #2373ba;
 }
 
 .partnerImage:nth-child(3):hover {
-    border-bottom: solid 4px #F1C911;
+    border-bottom: solid 6px #F1C911;
 }
 
 /* ---------------------------------FORM-------------------------------------- */
+form h1 {
+    color: #ffed00;
+    text-transform: uppercase;
+    font-size: 1.1rem;
+    margin-bottom: 30px;
+}
 
 input {
     display: block;
@@ -179,14 +185,16 @@ input {
 
 input,
 select {
-    font-size: 1.25rem;
+    font-size: 1rem;
     width: 15em;
 }
 
 .invalid {
-    border: 10px solid pink;
+    border: 1px solid red;
+    font-size: 1rem;
+    width: 15em;
+    padding: 8px;
 }
-
 
 input+p {
     display: none;
@@ -194,49 +202,54 @@ input+p {
 
 input.invalid+p {
     display: block;
+    font-size: .8rem;
     color: white;
+    padding: 0;
+    margin: 0 0 20px 0;
 }
 
 input:focus,
 textarea:focus {
     background-color: whitesmoke;
+    color: black;
 }
 
 form {
     justify-content: center;
     display: grid;
     font-family: DxcRegular;
-    padding: 200px;
+    padding: 270px;
 }
 
 form input {
     margin-bottom: 1.5rem;
+    background-color: lightgray;
+    border: inherit;
+    padding: 8px;
 }
 
 label {
+    font-size: 1.1rem;
     cursor: pointer;
-}
-
-#formSection {
-    background-color: black;
-    height: auto;
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    padding: 100px;
 }
 
 form label {
     color: white;
+    margin-bottom: 10px;
+    margin-top: 15px;
 }
 
 .formSubmit {
     color: #ffed00;
-    font-size: 16px;
-    padding: 12px 24px;
+    font-size: 1rem;
+    padding: 15px 30px;
+    margin-top: 25px;
     border: solid 1px #ffed00;
     background-color: black;
-    letter-spacing: 2px;
-    font-family: DxcBold;
+    letter-spacing: 1px;
+    font-family: DxcRegular;
+    text-transform: uppercase;
+    cursor: pointer;
 }
 
 .formSubmit:hover {
@@ -245,6 +258,28 @@ form label {
     background-color: #ffed00;
 }
 
+
+#formSection {
+    background-color: black;
+    height: auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.formImage {
+    background: url(images/asset4.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+/* #formSection h2 {
+    font-size: 30px;
+    float: right;
+    text-align: center;
+    bottom: 60%;
+    color: white;
+    font-family: DxcRegular;
+} */
 
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
@@ -269,7 +304,7 @@ form label {
     }
 
     .partnerImage {
-        height: 50px;
+        height: 40px;
     }
 }
 

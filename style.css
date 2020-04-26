@@ -28,7 +28,7 @@ html {
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
-    height: 800px;
+    height: 825px;
     width: auto;
     position: relative;
     /*filter: grayscale(100%);*/
@@ -38,23 +38,34 @@ html {
     color: #ffed00;
     position: absolute;
     text-decoration: none;
-    font-size: 16px;
+    font-size: 14px;
     padding: 18px 28px;
     border: solid 1px #ffed00;
-    top: 80%;
-    left: 15%;
+    top: 70%;
+    left: 10.5%;
     transform: translate(-50%, -50%);
-    font-family: DxcBold;
+    font-family: DxcRegular;
     letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.coverHeader {
+    color: white;
+    position: absolute;
+    font-family: DxcRegular;
+    font-size: 30px;
+    left: 5%;
+    top: 30%;
+    right: 70%;
 }
 
 .coverText {
     color: white;
     position: absolute;
     font-family: DxcRegular;
-    font-size: 24px;
+    font-size: 22px;
     left: 5%;
-    top: 30%;
+    top: 45%;
     right: 70%;
 }
 
@@ -86,21 +97,21 @@ a.coverButton:hover {
     background-repeat: no-repeat;
     background-position: center;
     padding: 30px;
+    margin: 22px 0 15px 40px;
 }
 
 .assetLink {
     float: right;
     background-color: black;
     display: block;
-    color: white;
     text-align: center;
-    padding: 20px 16px;
+    padding: 30px 16px;
     text-decoration: none;
     color: #00C9FF;
     border-bottom: solid 4px #00C9FF;
     font-family: DxcRegular;
-    letter-spacing: 2px;
-
+    letter-spacing: 1px;
+    margin-top: 20px;
 }
 
 /* ---------------------------------Landing page-------------------------------------- */
@@ -128,8 +139,6 @@ h1.mainTitle {
 }
 
 /*---------------------------------scroll line ---------------------------------------*/
-
-#scrollLine {}
 
 svg {
     height: 100%;
@@ -341,9 +350,35 @@ form label {
 
 .footer-items {
     width: 25%;
-    padding: 10px 20px;
+    padding: 10px 10px;
     box-sizing: border-box;
     color: #fff;
+}
+
+.footer-items img {
+    width: 150px;
+    height: 150px;
+    margin-top: 20px;
+}
+
+.footer-items a {
+    margin-right: 20px;
+    text-decoration: none;
+}
+
+.footer-items .facebookIcon {
+    width: 13px;
+    height: 25px;
+}
+
+.footer-items .linkedinIcon {
+    width: 25px;
+    height: 25px;
+}
+
+.footer-items .twitterIcon {
+    width: 30px;
+    height: 30px;
 }
 
 .footer-items p {
@@ -371,6 +406,7 @@ ul {
     color: #fff;
     font-size: 15px;
     letter-spacing: 0.5px;
+    line-height: 20px;
 }
 
 ul a {
@@ -382,35 +418,6 @@ ul a {
 
 ul a:hover {
     color: #00C9FF;
-}
-
-
-li i {
-    margin-right: 20px;
-}
-
-.social-media {
-    width: 100%;
-    color: #fff;
-    text-align: center;
-    font-size: 20px;
-}
-
-.social-media a {
-    text-decoration: none;
-}
-
-.social-media i {
-    height: 25px;
-    width: 25px;
-    margin: 20px 10px;
-    padding: 4px;
-    color: #fff;
-    transition: 0.5s;
-}
-
-.social-media i:hover {
-    transform: scale(1.5);
 }
 
 .footer-bottom {

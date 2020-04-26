@@ -15,12 +15,17 @@
 body {
     margin: 0;
 }
+
+html {
+    scroll-behavior: smooth;
+}
 /* ---------------------------------cover Image-------------------------------------- */
 
 .coverImage {
     background-image: linear-gradient(to left, rgba(0,0,0,0) 15%, rgba(128,128,128,0) 20%, rgba(0,0,0,0.9)70%), url("images/city-network-tech.jpg");
     background-position: center;
     background-repeat: no-repeat;
+    background-attachment: fixed;
     background-size: cover;
     height: 800px;
     width: auto;
@@ -96,7 +101,36 @@ a.coverButton:hover {
 }
 /* ---------------------------------Landing page-------------------------------------- */
 .mainContent{
-    height: 500px;
+    height: 1000px;
+    /*temporary, for testing the line and content on landing page*/
+}
+
+h1.mainTitle {
+    font-family: "DxcRegular";
+    font-size: 40px;
+    text-align: center;
+    padding: 3em;
+}
+
+.mainSection {
+    display: grid;
+    height: inherit;
+    grid-template-columns: 1fr 50px 1fr;
+}
+
+.infoMainText p {
+    font-family: "DxcRegular";
+    padding: 1em;
+}
+
+/*---------------------------------scroll line ---------------------------------------*/
+
+#scrollLine {
+
+}
+
+svg {
+    height: 100%;
 }
 
 /* ---------------------------------partners-------------------------------------- */

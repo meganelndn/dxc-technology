@@ -41,7 +41,22 @@ html {
     font-size: 14px;
     padding: 18px 28px;
     border: solid 1px #ffed00;
-    top: 70%;
+    top: 65%;
+    left: 10.5%;
+    transform: translate(-50%, -50%);
+    font-family: DxcRegular;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.coverButtonAsset {
+    color: #ffed00;
+    position: absolute;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 18px 28px;
+    border: solid 1px #ffed00;
+    top: 75%;
     left: 10.5%;
     transform: translate(-50%, -50%);
     font-family: DxcRegular;
@@ -63,10 +78,11 @@ html {
     color: white;
     position: absolute;
     font-family: DxcRegular;
-    font-size: 22px;
+    font-size: 20px;
     left: 5%;
     top: 45%;
     right: 70%;
+    text-align: justify;
 }
 
 a.coverButton:hover {
@@ -109,6 +125,20 @@ a.coverButton:hover {
     text-decoration: none;
     color: #00C9FF;
     border-bottom: solid 4px #00C9FF;
+    font-family: DxcRegular;
+    letter-spacing: 1px;
+    margin-top: 20px;
+}
+
+.factSheet {
+    float: right;
+    background-color: black;
+    display: block;
+    text-align: center;
+    padding: 30px 16px;
+    text-decoration: none;
+    color: white;
+    border-bottom: solid 4px #ffed00;
     font-family: DxcRegular;
     letter-spacing: 1px;
     margin-top: 20px;
@@ -281,6 +311,67 @@ form label {
     font-family: DxcRegular;
 } */
 
+/*--------------------------- ASSETS PAGE ----------------------------------*/
+#sections .sectionOne {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "icon1""text1";
+    background-color: lightgray;
+    padding: 30px;
+}
+
+#sections .sectionTwo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "text2""icon2";
+    padding: 30px;
+    background-color: darkgrey;
+}
+
+.sectionTwo img {
+    width: 200px;
+    height: 200px;
+}
+
+#sections .sectionThree {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "icon3""text3";
+    padding: 30px;
+    background-color: grey;
+}
+
+#sections .sectionFour {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "text4""icon4";
+    padding: 30px;
+    background-color: lightgray;
+}
+
+.sectionFour img {
+    width: 200px;
+    height: 100px;
+}
+
+#sections .sectionFive {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-template-areas: "icon5""text5";
+    padding: 30px;
+    background-color: darkgrey;
+}
+
+.sectionFive img {
+    width: 220px;
+    height: 220px;
+}
+
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
@@ -388,6 +479,11 @@ form label {
     padding: 10px 10px;
     box-sizing: border-box;
     color: #fff;
+}
+
+.footer-items .circle {
+    width: 30px;
+    height: 40px;
 }
 
 .footer-items img {

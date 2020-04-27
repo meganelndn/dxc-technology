@@ -104,7 +104,7 @@ window.addEventListener("scroll", myFunction);
 function myFunction() {
     var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
 
-    var draw = length * scrollpercent;
+    var draw = length * (scrollpercent*3);
 
     // Reverse the drawing (when scrolling upwards)
     theLine.style.strokeDashoffset = length - draw;

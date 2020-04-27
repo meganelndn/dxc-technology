@@ -183,23 +183,8 @@ a.coverButton:hover {
     /*temporary, for testing the line and content on landing page*/
 }
 
-h1.mainTitle {
-    font-family: "DxcRegular";
-    font-size: 40px;
-    text-align: center;
-    padding: 3em;
-}
 
-.mainSection {
-    display: grid;
-    height: inherit;
-    grid-template-columns: 1fr 50px 1fr;
-}
 
-.infoMainText p {
-    font-family: "DxcRegular";
-    padding: 1em;
-}
 
 /*---------------------------------scroll line ---------------------------------------*/
 
@@ -272,6 +257,7 @@ input.invalid+p {
     border: 1px solid red;
     padding: 7px;
     color: white;
+    width: 226px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
 }
@@ -318,6 +304,7 @@ form label {
     font-size: .8em;
     padding: 0;
     margin: 10px 0 0 0;
+    width: 230px;
 }
 
 #checkbox-input {
@@ -348,8 +335,9 @@ form label {
     background-color: black;
     height: auto;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr 50px 1fr;
 }
+
 
 .formImage {
     background: url(images/asset4.png);

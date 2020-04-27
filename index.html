@@ -68,25 +68,34 @@
           Full Name
         </label>
         <input type="text" name="fullName" placeholder="ex. John Smith" required>
-        <p>Full Name required</p>
+        <p>Please fill in your full name</p>
 
         <label for="email">
           Work E-mail
         </label>
         <input type="email" name="email" placeholder="ex. johnsmith@maersk.dk" required>
-        <p>Work e-mail required</p>
-
-        <label for="country">
-          Country
-        </label>
-        <input type="text" name="country" placeholder="ex. Denmark" required>
-        <p>Country required</p>
+        <p>Please fill in your work e-mail</p>
 
         <label for="jobTitle">
           Job Title
         </label>
         <input type="text" name="jobTitle" placeholder="ex. CEO" required>
-        <p>Job Title required</p>
+        <p>Please fill in your job title</p>
+
+        <label for="country">
+          Country
+        </label>
+        <select name="country" id="country" required>
+          <option value="Denmark">Denmark</option>
+          <option value="Sweden">Sweden</option>
+          <option value="Norway">Norway</option>
+        </select>
+
+        <input type="checkbox" name="checkbox" id="checkbox-input" required>
+        <label for="checkbox" id="checkbox-label">
+          I hereby agree that you can email me and process my data for marketing purposes
+        </label>
+        <p>Checkbox required</p>
 
         <input type="submit" value="Submit" class="formSubmit">
       </form>

@@ -347,22 +347,56 @@ form label {
 }
 
 /*--------------------------- ASSETS PAGE ----------------------------------*/
+/*------------1------------*/
+.icon1 {
+    grid-area: icon1;
+}
+
+.sectionTitle1 {
+    grid-area: title1;
+    color: white;
+}
+
+.sectionText1 {
+    grid-area: text1;
+    color: white;
+}
 #sections .sectionOne {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon1""text1";
-    background-color: lightgray;
+    grid-template-areas: "icon1 title1"
+    "icon1 text1";
+    /* background-color: lightgray; */
+    background-color: black;
     padding: 30px;
+
+    justify-items: center;
+    align-items: center;
 }
 
+/*------------2------------*/
+.icon2 {
+    grid-area: icon2;
+}
+
+.sectionTitle2 {
+    grid-area: title2;
+}
+
+.sectionText2 {
+    grid-area: text2;
+    color: black;
+}
 #sections .sectionTwo {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "text2""icon2";
+    grid-template-areas: "title2 icon2"
+    "text2 icon2";
     padding: 30px;
-    background-color: darkgrey;
+    /* background-color: darkgrey; */
+    background-color: white;
+    justify-items: center;
+    align-items: center;
 }
 
 .sectionTwo img {
@@ -370,22 +404,53 @@ form label {
     height: 200px;
 }
 
+/*------------3------------*/
+.icon3 {
+    grid-area: icon3;
+}
+
+.sectionTitle3 {
+    grid-area: title3;
+}
+
+.sectionText3 {
+    grid-area: text3;
+}
 #sections .sectionThree {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon3""text3";
+    grid-template-areas: "icon3 title3"
+    "icon3 text3";
+    grid-template-rows: min-content;
     padding: 30px;
     background-color: grey;
+
+    justify-items: center;
+    align-items: center;
 }
 
+/*------------4------------*/
+.icon4 {
+    grid-area: icon4;
+}
+
+.sectionTitle4 {
+    grid-area: title4;
+}
+
+.sectionText4 {
+    grid-area: text4;
+}
 #sections .sectionFour {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "text4""icon4";
+    grid-template-areas: "title4 icon4"
+    "text4 icon4";
     padding: 30px;
     background-color: lightgray;
+
+    justify-items: center;
+    align-items: center;
 }
 
 .sectionFour img {
@@ -393,20 +458,115 @@ form label {
     height: 100px;
 }
 
+/*------------5------------*/
+.icon5 {
+    grid-area: icon5;
+}
+
+.sectionTitle5 {
+    grid-area: title5;
+}
+
+.sectionText5 {
+    grid-area: text5;
+}
 #sections .sectionFive {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon5""text5";
+    grid-template-areas: "icon5 title5"
+    "icon5 text5";
     padding: 30px;
     background-color: darkgrey;
+
+    justify-items: center;
+    align-items: center;
 }
 
 .sectionFive img {
     width: 220px;
     height: 220px;
 }
+/*----------------------------------sections styling---------------------------------*/
 
+/*title*/
+#sections p:first-of-type {
+    font-family: "DxcRegular";
+    font-size: 20px;
+    align-self: initial;
+    margin: 0.3em;
+    padding: initial;
+    border-bottom: solid 2px #00C9FF;
+}
+
+/*SUBtitle*/
+#sections p:last-of-type {
+    font-family: "DxcRegular";
+    font-size: 16px;
+    margin: 0 8rem;
+    align-self: baseline;
+}
+
+section {
+    height: 20vh;
+}
+/*----------------------------------grahic database---------------------------------*/
+
+.databaseText {
+    color: black;
+    font-family: "DxcRegular";
+    font-size: 20px;
+}
+
+
+#databaseImg {
+    display: flex;
+    flex-direction: column;
+    margin: 15rem;
+}
+
+/*---------------------------------advantages and features-----------------------------*/
+/*overall*/
+#bottomInfo {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 5em;
+    margin: 8em;
+}
+/*advantages*/
+.advantages {
+    border: 1px solid black;
+    padding: 3em;
+}
+.advTitle {
+    color: black;
+    font-family: "DxcRegular";
+    font-size: 20px;
+    text-align: center;
+    
+}
+
+.advText {
+    color: black;
+    font-family: "DxcRegular";
+    font-size: 16px;
+}
+/*fetaures*/
+.features {
+    border: 1px solid black;
+    padding: 3em;
+}
+.featTitle{
+    color: black;
+    font-family: "DxcRegular";
+    font-size: 20px;
+    text-align: center;
+}
+
+.featText {
+    color: black;
+    font-family: "DxcRegular";
+    font-size: 16px;
+}
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

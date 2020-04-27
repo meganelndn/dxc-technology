@@ -1,8 +1,22 @@
-//global
+
 
 import {endpoint, apiKey} from "./modules/settings";
 
 window.addEventListener("load", init);
+
+
+//--------------------------------- newUser -----------------------------------------//
+
+if(!localStorage.getItem("userName")) {
+   //if local storage is empty
+   console.log("nothing happens")
+   console.log(window.location.pathname)
+} else {
+    console.log("welcome back")
+    //window.location = "asset.html"
+    console.log(window.location.pathname)
+
+}
 
 //--------------------------------- init -----------------------------------------//
 
@@ -38,6 +52,8 @@ form.addEventListener("submit", (e)=>{
         })
     
     //console.log("submit form")
+
+   
     //3. clicked on submit, check validity
     if(form.checkValidity()){
         postSubscription({
@@ -47,7 +63,11 @@ form.addEventListener("submit", (e)=>{
             jobTitle: form.elements.jobTitle.value
 
         });
+        //add to local storage
+        localStorage.setItem("userName", form.elements.fullName.value);
+
         location.replace("asset.html");
+        
     } else {
           formElements.forEach((el)=>{
             if(!el.checkValidity()){
@@ -110,4 +130,13 @@ function myFunction() {
 
  }
 
- //--------------------------------------------------------------------------//
+ //---------------------------------log back-----------------------------------------//
+
+
+
+
+  //--------------------------------------------------------------------------------//
+
+
+
+

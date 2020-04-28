@@ -25,14 +25,31 @@
     <h1 class="coverHeader">DXC Business Intelligence for Microsoft</h1>
     <p class="coverText">Deliver value and insight with business intelligence</p>
     <a href="#formSection" class="coverButton">
-      <!-- <svg>
-        <rect x="0" y="0" fill="none" width="100%" height="100%" />
-      </svg> -->
-      Learn More
+      Learn more
     </a>
   </div>
   <main>
 
+    <div class="teaser">
+      <h1>With DXC Business Intelligence for Microsoft, you can</h1>
+      <div class="teaserGrid">
+        <div class="teaserOne">
+          <h3>Optimize your business management baseline</h3>
+          <img src="icons/optimize.png" alt="icon">
+        </div>
+        <div class="teaserTwo">
+          <h3>Flexible reporting out of the box</h3>
+          <img src="icons/flexibility.png" alt="icon">
+        </div>
+        <div class="teaserThree">
+          <h3>Get up and running fast</h3>
+          <img src="icons/fast.png" alt="icon">
+        </div>
+      </div>
+      <!-- <a href="#formSection" class="middleButton">
+        Subscribe
+      </a> -->
+    </div>
 
     <div class="partners">
       <img src="images/sql-server.png" alt="sql-server" class="partnerImage">
@@ -40,12 +57,17 @@
       <img src="images/powerBi_white.png" alt="power-bi" class="partnerImage">
     </div>
 
-
-
     <section id="formSection">
 
+      <div class="keywords">
+      </div>
+
+      <svg id="scrollLine">
+        <line x1="0" y1="100" x2="0" y2="1000" stroke="white" stroke-width="1px" id="theLine" />
+      </svg>
+
       <form>
-        <h1>Fill out to learn more</h1>
+        <h1>Fill out to read more</h1>
 
         <label for="fullName">
           Full Name
@@ -69,6 +91,7 @@
           Country
         </label>
         <select name="country" id="country" required>
+          <option value="">Choose a country</option>
           <option value="Denmark">Denmark</option>
           <option value="Sweden">Sweden</option>
           <option value="Norway">Norway</option>
@@ -82,15 +105,6 @@
 
         <input type="submit" value="Submit" class="formSubmit">
       </form>
-
-
-      <svg id="scrollLine">
-        <line x1="0" y1="100" x2="0" y2="1000" stroke="white" stroke-width="1px" id="theLine" />
-      </svg>
-
-
-      <div class="formImage">
-      </div>
 
     </section>
 

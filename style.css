@@ -192,29 +192,93 @@ svg {
     height: 100%;
 }
 
+/* ---------------------------------teaser section-------------------------------------- */
+.teaser {
+    font-family: DxcBold;
+    padding: 50px 100px;
+}
+
+.teaserGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.teaser h1 {
+    text-align: center;
+}
+
+.teaser h3 {
+    font-family: DxcRegular;
+    font-size: 24px;
+    text-align: center;
+    /* display: flex;
+    justify-self: flex-start;
+    align-self: flex-end; */
+}
+
+.teaser img {
+    display: block;
+    left: 0;
+    right: 0;
+}
+
+.teaserOne,
+.teaserTwo,
+.teaserThree {
+    padding: 100px 100px 40px 0;
+}
+
+.teaserOne img {
+    width: 100px;
+    height: 100px;
+}
+
+.teaserTwo img {
+    width: 100px;
+    height: 100px;
+}
+
+.teaserThree img {
+    width: 120px;
+    height: 120px;
+}
+
+a.middleButton {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 24px 32px;
+    background: #ffed00;
+    font-family: DxcRegular;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 500px;
+}
+
 /* ---------------------------------partners-------------------------------------- */
 
 .partners {
     display: flex;
     justify-content: space-around;
-
 }
 
 .partnerImage {
-    height: 80px;
+    height: 60px;
     width: auto;
-    padding: 30px 16px;
+    padding: 25px;
 }
 
-.partnerImage:first-child:hover {
+.partnerImage:first-child {
     border-bottom: solid 6px #d2303a;
 }
 
-.partnerImage:nth-child(2):hover {
+.partnerImage:nth-child(2) {
     border-bottom: solid 6px #2373ba;
 }
 
-.partnerImage:nth-child(3):hover {
+.partnerImage:nth-child(3) {
     border-bottom: solid 6px #F1C911;
 }
 
@@ -272,7 +336,7 @@ form {
     justify-content: center;
     display: grid;
     font-family: DxcRegular;
-    padding: 270px;
+    margin: 170px;
 }
 
 form input {
@@ -338,12 +402,22 @@ form label {
     grid-template-columns: 1fr 50px 1fr;
 }
 
-
-.formImage {
-    background: url(images/asset4.png);
+/* .keywords {
+    font-family: DxcRegular;
+    color: white;
+} */
+/* 
+.icon {
+    height: 100px;
+    width: 100px;
+    background: white;
+}
+ */
+.keywords {
+    font-family: DxcRegular;
+    background: url(images/bi.png);
     background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: right;
+    background-position: center;
 }
 
 /*--------------------------- ASSETS PAGE ----------------------------------*/

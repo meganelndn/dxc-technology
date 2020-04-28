@@ -10,7 +10,35 @@ window.addEventListener("load", init);
 //--------------------------------- init -----------------------------------------//
 
 function init() {
+    verifyUser();
     setUpForm();
+}
+
+
+//--------------------------------- newUser -----------------------------------------//
+
+
+function verifyUser(){
+
+    console.log(window.location.pathname)
+
+   
+    if (window.location.pathname == "/index.html" && "userName" in localStorage){
+        console.log("there IS a user name")
+        //1.add modal
+        document.querySelector(".modalBackground").classList.add("showModal");
+        //set timeOut
+        setTimeout((e)=>{(
+            location.replace("asset.html")
+            //add Button with option to close and go back to index
+
+        )}, 3000)
+        //2.redirect to asset
+      
+    } else {
+        console.log("there is NOT a user name")
+    }
+    
 }
 
 
@@ -28,17 +56,25 @@ function setUpForm() {
 
     //3.novalidate
     form.setAttribute("novalidate", true);
+
+       //remove the error for the Checkbox
+       //console.log(document.querySelector("#checkbox-label p"));
+       document.querySelector("#checkbox-label p").classList.add("hideCheckError");
+
     //2. send basic structure
     form.addEventListener("submit", (e) => {
         e.preventDefault();
 
         //1.select all inputs
         const formElements = form.querySelectorAll("input");
+
+     
+
         //2.loop through them and check if are valid or not
         formElements.forEach((el) => {
             el.classList.remove("invalid");
         })
-
+        
         //console.log("submit form")
         //3. clicked on submit, check validity
         if (form.checkValidity()) {
@@ -48,11 +84,23 @@ function setUpForm() {
                 country: form.elements.country.value,
                 jobTitle: form.elements.jobTitle.value
             });
+            
+            
+            //1- info is added to localStoage for later
+            localStorage.setItem("userName", form.elements.fullName.value);
+
+            //2- if form is valid user is sent to Asset
             location.replace("asset.html");
         } else {
             formElements.forEach((el) => {
                 if (!el.checkValidity()) {
                     el.classList.add("invalid");
+                    if(form.elements.checkbox.checkValidity() === false){
+                            //show Error
+                            document.querySelector("#checkbox-label p").classList.remove("hideCheckError");
+                    } else {
+                            document.querySelector("#checkbox-label p").classList.add("hideCheckError");
+                    }
                 }
             })
         }
@@ -84,31 +132,3 @@ function postSubscription(userInfo) {
 
 //********************************* DESIGN ********************************************//
 
-
-//--------------------------------- scroll line -----------------------------------------//
-//source https://www.quanzhanketang.com/howto/howto_js_scrolldrawing.html
-
-// Get the id of the <path> element and the length of <path>
-var theLine = document.getElementById("theLine");
-var length = theLine.getTotalLength();
-
-// The start position of the drawing
-theLine.style.strokeDasharray = length;
-
-// Hide the triangle by offsetting dash. Remove this line to show the triangle before scroll draw
-theLine.style.strokeDashoffset = length;
-
-// Find scroll percentage on scroll (using cross-browser properties), and offset dash same amount as percentage scrolled
-window.addEventListener("scroll", myFunction);
-
-function myFunction() {
-    var scrollpercent = (document.body.scrollTop + document.documentElement.scrollTop) / (document.documentElement.scrollHeight - document.documentElement.clientHeight);
-
-    var draw = length * (scrollpercent*3);
-
-    // Reverse the drawing (when scrolling upwards)
-    theLine.style.strokeDashoffset = length - draw;
-
-}
-
-//--------------------------------------------------------------------------//

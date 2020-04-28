@@ -453,6 +453,7 @@ form label {
 .hideCheckError {
     display: none;
 }
+
 /*--------------------------- ASSETS PAGE ----------------------------------*/
 /*------------1------------*/
 
@@ -485,35 +486,42 @@ form label {
     font-family: "DxcRegular";
     font-size: 26px;
     text-align: center;
-    margin: 0.3em;
     padding: 50px 100px 20px 100px;
-    border-bottom: solid 2px #00C9FF;
+}
+
+.mainSection h3 {
+    font-family: "DxcRegular";
+    font-size: 19px;
+    text-align: center;
+    margin: 30px;
+    padding: 10px 0 40px 0;
 }
 
 .mainSection p {
     font-family: "DxcRegular";
     font-size: 16px;
     margin: 0.3em;
-    padding: 20px;
-    text-align: center;
+    padding: 10px;
+    text-align: justify;
 }
 
 .mainSection #cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-rows: 1fr 1fr;
-    grid-template-areas:
-        "one""two""three"
-        "four"".""five";
     grid-row-gap: 20px;
-    grid-column-gap: 20px;
+    grid-template-areas:
+        "one two three"
+        "four . five";
 }
 
 .mainSection #cards h3 {
     font-family: "DxcRegular";
     font-size: 22px;
     margin: 0.3em;
+    padding: 30px 0 20px 0;
     text-align: center;
+    border-bottom: solid 2px #00C9FF;
 }
 
 #cards .cardOne,
@@ -521,9 +529,14 @@ form label {
 #cards .cardThree,
 #cards .cardFour,
 #cards .cardFive {
-    border: 1px solid black;
-    border-radius: 5%;
+    margin: 0 30px;
+    padding: 40px;
+    box-shadow: 3px 3px 5px 6px #ccc;
 }
+
+/* #cards .cardFive {
+    grid-area: five;
+} */
 
 #cards .cardOneImg,
 #cards .cardTwoImg,
@@ -533,6 +546,10 @@ form label {
     display: flex;
     justify-content: center;
     margin: 20px 0;
+}
+
+#cards .cardFourImg {
+    margin: 56px;
 }
 
 #cards .cardOne img {
@@ -564,6 +581,7 @@ form label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 700px;
+    margin-top: 60px;
 }
 
 .featureSectionText {
@@ -604,6 +622,7 @@ form label {
     display: grid;
     grid-template-columns: 1fr 1fr;
     height: 700px;
+    margin-top: 20px;
 }
 
 .advantageSectionText h3 {
@@ -834,6 +853,7 @@ p.databaseText {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+
 /*--------------------------------------MODAL----------------------------------------*/
 
 .modalBackground {
@@ -852,7 +872,7 @@ p.databaseText {
     margin: 10% auto;
     width: 30%;
     padding: 10px;
-    box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
     background-color: white;
     justify-items: center;
     align-items: center;
@@ -867,6 +887,7 @@ p.databaseText {
 .showModal {
     display: block;
 }
+
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

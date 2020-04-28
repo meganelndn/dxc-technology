@@ -195,7 +195,11 @@ svg {
 /* ---------------------------------teaser section-------------------------------------- */
 .teaser {
     font-family: DxcBold;
-    padding: 50px 100px;
+    padding: 50px 150px;
+}
+
+.teaserRow2 {
+    padding: 0 260px;
 }
 
 .teaserGrid {
@@ -205,17 +209,21 @@ svg {
     grid-column-gap: 20px;
 }
 
+.teaserGrid2 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
 .teaser h1 {
     text-align: center;
 }
 
-.teaser h3 {
+.teaser h3,
+.teaserRow2 h3 {
     font-family: DxcRegular;
     font-size: 24px;
     text-align: center;
-    /* display: flex;
-    justify-self: flex-start;
-    align-self: flex-end; */
 }
 
 .teaser img {
@@ -226,13 +234,17 @@ svg {
 
 .teaserOne,
 .teaserTwo,
-.teaserThree {
+.teaserThree,
+.teaserFour,
+.teaserFive {
     padding: 60px 20px 20px 0;
 }
 
 .teaserOneImg,
 .teaserTwoImg,
-.teaserThreeImg {
+.teaserThreeImg,
+.teaserFourImg,
+.teaserFiveImg {
     display: flex;
     justify-content: center;
 }
@@ -245,11 +257,24 @@ svg {
 .teaserTwo img {
     width: 100px;
     height: 100px;
+    margin-top: 30px;
 }
 
 .teaserThree img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.teaserFour img {
     width: 120px;
-    height: 120px;
+    height: 60px;
+    margin-top: 40px;
+}
+
+.teaserFive img {
+    width: 140px;
+    height: 140px;
 }
 
 .middleButton {

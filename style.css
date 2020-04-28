@@ -192,30 +192,137 @@ svg {
     height: 100%;
 }
 
+/* ---------------------------------teaser section-------------------------------------- */
+.teaser {
+    font-family: DxcBold;
+    padding: 50px 150px;
+}
+
+.teaserRow2 {
+    padding: 0 260px;
+}
+
+.teaserGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.teaserGrid2 {
+    display: grid;
+    grid-template-columns: 0.5fr 0.5fr;
+    grid-template-rows: 1fr;
+}
+
+.teaser h1 {
+    text-align: center;
+}
+
+.teaser h3,
+.teaserRow2 h3 {
+    font-family: DxcRegular;
+    font-size: 24px;
+    text-align: center;
+}
+
+.teaser img {
+    display: block;
+    left: 0;
+    right: 0;
+}
+
+.teaserOne,
+.teaserTwo,
+.teaserThree,
+.teaserFour,
+.teaserFive {
+    padding: 60px 20px 20px 0;
+}
+
+.teaserOneImg,
+.teaserTwoImg,
+.teaserThreeImg,
+.teaserFourImg,
+.teaserFiveImg {
+    display: flex;
+    justify-content: center;
+}
+
+.teaserOne img {
+    width: 100px;
+    height: 100px;
+}
+
+.teaserTwo img {
+    width: 100px;
+    height: 100px;
+    margin-top: 30px;
+}
+
+.teaserThree img {
+    width: 100px;
+    height: 100px;
+    margin-top: 15px;
+}
+
+.teaserFour img {
+    width: 120px;
+    height: 60px;
+    margin-top: 40px;
+}
+
+.teaserFive img {
+    width: 140px;
+    height: 140px;
+}
+
+.middleButton {
+    display: flex;
+    justify-content: center;
+}
+
+#middleButton {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 25px 70px;
+    background: #ffed00;
+    font-family: DxcRegular;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+#middleButton:hover {
+    background-color: white;
+    border: 3px solid #ffed00;
+    padding: 25px 70px;
+}
+
 /* ---------------------------------partners-------------------------------------- */
 
 .partners {
     display: flex;
     justify-content: space-around;
-
 }
 
 .partnerImage {
-    height: 80px;
+    height: 60px;
     width: auto;
-    padding: 30px 16px;
+    padding: 25px;
 }
 
-.partnerImage:first-child:hover {
-    border-bottom: solid 6px #d2303a;
+.partnerImage:first-child {
+    border-bottom: solid 5px #d2303a;
 }
 
-.partnerImage:nth-child(2):hover {
-    border-bottom: solid 6px #2373ba;
+.partnerImage:nth-child(2) {
+    border-bottom: solid 5px #2373ba;
 }
 
-.partnerImage:nth-child(3):hover {
-    border-bottom: solid 6px #F1C911;
+.partnerImage:nth-child(3) {
+    border-bottom: solid 5px #F1C911;
 }
 
 /* ---------------------------------FORM-------------------------------------- */
@@ -272,7 +379,7 @@ form {
     justify-content: center;
     display: grid;
     font-family: DxcRegular;
-    padding: 270px;
+    padding: 60px;
 }
 
 form input {
@@ -334,16 +441,10 @@ form label {
 #formSection {
     background-color: black;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 50px 1fr;
-}
-
-
-.formImage {
-    background: url(images/asset4.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: right;
+    margin: 10px 450px;
+    border-radius: 5%;
+    /* display: grid;
+    grid-template-columns: 1fr 50px 1fr; */
 }
 
 /*--------------------------- ASSETS PAGE ----------------------------------*/
@@ -361,11 +462,12 @@ form label {
     grid-area: text1;
     color: white;
 }
+
 #sections .sectionOne {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon1 title1"
-    "icon1 text1";
+        "icon1 text1";
     /* background-color: lightgray; */
     background-color: black;
     padding: 30px;
@@ -387,11 +489,12 @@ form label {
     grid-area: text2;
     color: black;
 }
+
 #sections .sectionTwo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title2 icon2"
-    "text2 icon2";
+        "text2 icon2";
     padding: 30px;
     /* background-color: darkgrey; */
     background-color: white;
@@ -416,11 +519,12 @@ form label {
 .sectionText3 {
     grid-area: text3;
 }
+
 #sections .sectionThree {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon3 title3"
-    "icon3 text3";
+        "icon3 text3";
     grid-template-rows: min-content;
     padding: 30px;
     background-color: grey;
@@ -441,11 +545,12 @@ form label {
 .sectionText4 {
     grid-area: text4;
 }
+
 #sections .sectionFour {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title4 icon4"
-    "text4 icon4";
+        "text4 icon4";
     padding: 30px;
     background-color: lightgray;
 
@@ -470,11 +575,12 @@ form label {
 .sectionText5 {
     grid-area: text5;
 }
+
 #sections .sectionFive {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon5 title5"
-    "icon5 text5";
+        "icon5 text5";
     padding: 30px;
     background-color: darkgrey;
 
@@ -486,6 +592,7 @@ form label {
     width: 220px;
     height: 220px;
 }
+
 /*----------------------------------sections styling---------------------------------*/
 
 /*title*/
@@ -509,6 +616,7 @@ form label {
 section {
     height: 20vh;
 }
+
 /*----------------------------------grahic database---------------------------------*/
 
 .databaseText {
@@ -532,17 +640,19 @@ section {
     grid-gap: 5em;
     margin: 8em;
 }
+
 /*advantages*/
 .advantages {
     border: 1px solid black;
     padding: 3em;
 }
+
 .advTitle {
     color: black;
     font-family: "DxcRegular";
     font-size: 20px;
     text-align: center;
-    
+
 }
 
 .advText {
@@ -550,12 +660,14 @@ section {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+
 /*fetaures*/
 .features {
     border: 1px solid black;
     padding: 3em;
 }
-.featTitle{
+
+.featTitle {
     color: black;
     font-family: "DxcRegular";
     font-size: 20px;
@@ -567,6 +679,7 @@ section {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

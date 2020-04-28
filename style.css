@@ -71,7 +71,7 @@ html {
 }
 
 .coverHeader {
-    color: white;
+    color: #ffed00;
     /* position: absolute; */
     font-family: DxcRegular;
     font-size: 30px;
@@ -540,7 +540,8 @@ form label {
 .mainSection #cards {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 1fr;
+    /* grid-template-rows: 1fr 1fr; */
+    grid-template-rows: auto;
     grid-row-gap: 20px;
     grid-template-areas:
         "one two three"
@@ -675,7 +676,7 @@ form label {
 }
 
 .databaseImage {
-    width: 100%;
+    width: auto;
     height: auto;
 }
 
@@ -955,11 +956,17 @@ p.databaseText {
 
     .advantageSection, .featureSection{
         grid-template-columns: 1fr;
+        display: contents;
     }
 
     .mainSection #cards {
 
-        grid-template-columns: repeat(auto-fill, minmax(1fr));
+        grid-template-columns: 1fr 1fr;
+        display: grid;
+
+        grid-template-rows: auto;
+        grid-row-gap: 20px;
+        grid-template-areas: none;
 
     }
 
@@ -967,6 +974,9 @@ p.databaseText {
         margin: 2rem;
     }
   
+    #databaseImg {
+        margin: 1em;
+    }
 }
 
 
@@ -1015,6 +1025,7 @@ p.databaseText {
         height: 0;
         top: 6em;
         }
+    
 
 }
 
@@ -1177,12 +1188,15 @@ ul a:hover {
     }
 }
 
-.footer-itemsAsset {
-    width: fit-content;
-    color: white;
-}
+
 
 /*ASSET form */
+
+.footerAsset{
+color: white;
+background-color: black;
+}
+
 .inner-footerAsset{
     display: flex;
     flex-wrap: ;
@@ -1191,6 +1205,29 @@ ul a:hover {
     place-content: space-around;
 }
 
+.footer-infoAsset h2, p{
+    font-family: "DxcRegular";
+    font-size: 16px;
+    text-align: center;
+    padding: 0;
+}
+
+
+.footer-itemsAsset {
+    width: fit-content;
+    color: white;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.footer-infoAsset img {
+    height: 2rem;
+    width: auto;
+}
+
+.footer-itemsAsset img{
+    display: none ;
+}
 
 
 

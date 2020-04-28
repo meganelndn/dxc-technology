@@ -22,24 +22,35 @@ function verifyUser(){
 
     console.log(window.location.pathname)
 
-   
+    //User comes from the INDEX page
     if (window.location.pathname == "/index.html" && "userName" in localStorage){
         console.log("there IS a user name")
         //1.add modal
         document.querySelector(".modalBackground").classList.add("showModal");
+        //option to sign out
+        document.querySelector(".signOutModal").addEventListener("click", (e)=> {(
+            localStorage.removeItem("userName")
+        )}, 100);
         //set timeOut
         setTimeout((e)=>{(
             location.replace("asset.html")
             //add Button with option to close and go back to index
 
-        )}, 3000)
+        )}, 5000)
         //2.redirect to asset
       
-    } else {
-        console.log("there is NOT a user name")
-    }
+    } 
     
+    //User comes from the ASSET page
+    else if (window.location.pathname == "/asset.html" && !("userName" in localStorage)){
+        console.log("there is NOT a user name")
+        //send user back to Index
+        location.replace("/index.html#formSection");
+    }
+   
+
 }
+
 
 
 //--------------------------------- form -----------------------------------------//

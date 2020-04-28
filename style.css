@@ -617,6 +617,30 @@ form label {
     padding: 5px;
 }
 
+.featureSectionText p::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(icons/checkbox.png);
+    background-size: cover;
+    padding: 10px;
+    margin: 1px;
+}
+
+.advantageSectionText p::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(icons/arrow.png);
+    background-size: cover;
+    padding: 10px;
+    margin: 1px;
+}
+
 .featureImg,
 .advantageImg {
     display: flex;
@@ -739,26 +763,37 @@ p.databaseText {
     height: 100%;
     overflow: auto;
     background-color: rgba(0, 0, 0, 0.3);
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
 }
 
 .modalContent {
     margin: 10% auto;
     width: 30%;
-    padding: 10px;
+    padding: 40px;
     box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
     background-color: white;
     justify-items: center;
     align-items: center;
     display: grid;
+    font-family: "DxcRegular";
 }
 
 .modalContent p {
     display: block;
     color: black;
+    font-family: "DxcRegular";
 }
 
 .showModal {
     display: block;
+}
+
+button.signOutModal {
+    background: #ffed00;
+    border: inherit;
+    font-family: "DxcRegular";
+    color: black;
+    padding: 20px;
 }
 
 /* ---------------------------------RESPONSIVE-------------------------------------- */
@@ -930,14 +965,19 @@ p.databaseText {
 
 .footer-items {
     width: max-content;
-    padding: 10px 10px;
+    padding: 10px 50px;
     box-sizing: border-box;
     color: #fff;
 }
 
-.footer-items .circle {
-    width: 30px;
-    height: 40px;
+.footer-itemsAsset h1 {
+    text-align: start;
+    padding-top: 55px;
+    padding-left: 10px;
+}
+
+.footer-itemsAsset p.last-paragraoh {
+    padding: 30px 100px 50px 0;
 }
 
 .footer-items img {
@@ -954,6 +994,7 @@ p.databaseText {
 .footer-items .facebookIcon {
     width: 13px;
     height: 25px;
+    padding-left: 15px;
 }
 
 .footer-items .linkedinIcon {
@@ -969,12 +1010,14 @@ p.databaseText {
 .footer-items p {
     font-size: 16px;
     text-align: justify;
-    line-height: 25px;
+    line-height: 10px;
     color: #fff;
 }
 
-.footer-items h1 {
+.footer-items h4 {
     color: #fff;
+    font-size: 28px;
+    padding: 30px 0 0 15px;
 }
 
 .border1 {

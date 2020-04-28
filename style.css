@@ -23,7 +23,7 @@ html {
 /* ---------------------------------cover Image-------------------------------------- */
 
 .coverImage {
-   /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 15%, rgba(128, 128, 128, 0) 20%, rgba(0, 0, 0, 0.9)70%), url(images/city-network-tech.jpg);*/
+    /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 15%, rgba(128, 128, 128, 0) 20%, rgba(0, 0, 0, 0.9)70%), url(images/city-network-tech.jpg);*/
     background-image: url(images/city-network-tech.jpg);
     background-position: center;
     background-repeat: no-repeat;
@@ -37,7 +37,7 @@ html {
 
 
 .coverButton {
-    
+
     position: absolute;
     text-decoration: none;
     font-size: 14px;
@@ -110,6 +110,7 @@ a.coverButton:hover {
     padding: 3em;
 
 }
+
 /* .coverButton {
     background: inherit;
 
@@ -487,28 +488,7 @@ form label {
 }
 
 /*--------------------------- ASSETS PAGE ----------------------------------*/
-/*------------1------------*/
-
-/*----------------------------------sections styling---------------------------------*/
-
-/*title*/
-/* #sections p:first-of-type {
-    font-family: "DxcRegular";
-    font-size: 16px;
-    align-self: initial;
-    margin: 0.3em;
-    padding: 20px;
-    text-align: center;
-} */
-
-/*SUBtitle*/
-/* #sections p:last-of-type {
-    font-family: "DxcRegular";
-    font-size: 16px;
-    margin: 0 8rem;
-    align-self: baseline;
-    text-align: center;
-} */
+/*--------------------------sections styling---------------------------------*/
 
 .mainSection {
     height: 700px;
@@ -684,145 +664,6 @@ p.databaseText {
     margin-top: 50px;
 }
 
-/* .icon1 {
-    grid-area: icon1;
-}
-
-.sectionTitle1 {
-    grid-area: title1;
-    color: black;
-}
-
-.sectionText1 {
-    grid-area: text1;
-    color: black;
-}
-
-#sections .sectionOne {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr;
-    grid-template-areas: "icon1 title1"
-        "icon1 text1";
-    padding: 50px;
-    justify-items: center;
-    align-items: center;
-    border: 1px solid black;
-}
-
-/*------------2------------*/
-/* .icon2 {
-    grid-area: icon2;
-}
-
-.sectionTitle2 {
-    grid-area: title2;
-}
-
-.sectionText2 {
-    grid-area: text2;
-    color: black;
-}
-
-#sections .sectionTwo {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title2 icon2"
-        "text2 icon2";
-    padding: 30px;
-    justify-items: center;
-    align-items: center;
-    border: 1px solid black;
-}
-
-.sectionTwo img {
-    width: 200px;
-    height: 200px;
-}
- */
-/*------------3------------*/
-/* .icon3 {
-    grid-area: icon3;
-}
-
-.sectionTitle3 {
-    grid-area: title3;
-}
-
-.sectionText3 {
-    grid-area: text3;
-}
-
-#sections .sectionThree {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "icon3 title3"
-        "icon3 text3";
-    grid-template-rows: min-content;
-    padding: 30px;
-    justify-items: center;
-    align-items: center;
-    border: 1px solid black;
-} */
-
-/*------------4------------*/
-/* .icon4 {
-    grid-area: icon4;
-}
-
-.sectionTitle4 {
-    grid-area: title4;
-}
-
-.sectionText4 {
-    grid-area: text4;
-}
-
-#sections .sectionFour {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "title4 icon4"
-        "text4 icon4";
-    padding: 30px;
-    justify-items: center;
-    align-items: center;
-    border: 1px solid black;
-}
-
-.sectionFour img {
-    width: 200px;
-    height: 100px;
-} */
-
-/*------------5------------*/
-/* .icon5 {
-    grid-area: icon5;
-}
-
-.sectionTitle5 {
-    grid-area: title5;
-}
-
-.sectionText5 {
-    grid-area: text5;
-}
-
-#sections .sectionFive {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    grid-template-areas: "icon5 title5"
-        "icon5 text5";
-    padding: 30px;
-    justify-items: center;
-    align-items: center;
-    border: 1px solid black;
-}
-
-.sectionFive img {
-    width: 220px;
-    height: 220px;
-} */
-
 /*----------------------------------grahic database---------------------------------*/
 
 .databaseText {
@@ -946,14 +787,17 @@ p.databaseText {
     .partnerImage {
         height: 40px;
     }
+
     #formSection {
         margin: 0;
     }
+
     #coverInfo {
         top: 5em;
     }
 
-    .advantageSection, .featureSection{
+    .advantageSection,
+    .featureSection {
         grid-template-columns: 1fr;
     }
 
@@ -966,7 +810,7 @@ p.databaseText {
     #databaseImg {
         margin: 2rem;
     }
-  
+
 }
 
 
@@ -1001,20 +845,24 @@ p.databaseText {
         padding: 0;
     }
 
-    .teaserGrid, .teaserGrid2 {
+    .teaserGrid,
+    .teaserGrid2 {
         grid-template-columns: 1fr;
     }
-    .teaser, .teaserRow2 {
+
+    .teaser,
+    .teaserRow2 {
         padding: 0;
     }
 
     #formSection {
         margin: 0;
     }
+
     #coverInfo {
         height: 0;
         top: 6em;
-        }
+    }
 
 }
 
@@ -1035,18 +883,23 @@ p.databaseText {
         left: 50%;
     }
 
-    .teaserGrid, .teaserGrid2 {
+    .teaserGrid,
+    .teaserGrid2 {
         grid-template-columns: 1fr;
     }
-    .teaser, .teaserRow2 {
+
+    .teaser,
+    .teaserRow2 {
         padding: 0;
     }
+
     #formSection {
         margin: 0;
     }
+
     #coverInfo {
-    height: 0;
-    top: 6em;
+        height: 0;
+        top: 6em;
     }
 }
 
@@ -1183,9 +1036,9 @@ ul a:hover {
 }
 
 /*ASSET form */
-.inner-footerAsset{
+.inner-footerAsset {
     display: flex;
-    flex-wrap: ;
+    /*     flex-wrap: ; */
     box-sizing: border-box;
     justify-content: center;
     place-content: space-around;
@@ -1201,6 +1054,7 @@ ul a:hover {
 .teaserOne:hover {
     transform: scale(1.5);
 }
+
 .teaserFour:hover {
     transform: scale(1.5);
 }

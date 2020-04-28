@@ -143,3 +143,13 @@ function postSubscription(userInfo) {
 
 //********************************* DESIGN ********************************************//
 
+// When the user scrolls down 50px from the top of the document, resize the header's font size
+window.onscroll = function() {scrollFunction()};
+
+function scrollFunction() {
+  if (document.documentElement.scrollTop > 600) {
+    document.querySelector("header").style.opacity = "0.8";
+  } else {
+    document.querySelector("header").style.opacity = "1";
+  }
+}

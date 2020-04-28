@@ -23,19 +23,21 @@ html {
 /* ---------------------------------cover Image-------------------------------------- */
 
 .coverImage {
-    background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 15%, rgba(128, 128, 128, 0) 20%, rgba(0, 0, 0, 0.9)70%), url("images/city-network-tech.jpg");
+   /* background-image: linear-gradient(to left, rgba(0, 0, 0, 0) 15%, rgba(128, 128, 128, 0) 20%, rgba(0, 0, 0, 0.9)70%), url(images/city-network-tech.jpg);*/
+    background-image: url(images/city-network-tech.jpg);
     background-position: center;
     background-repeat: no-repeat;
     background-attachment: fixed;
     background-size: cover;
     height: 825px;
-    width: auto;
-    position: relative;
-    /*filter: grayscale(100%);*/
+    /* width: auto; */
+    /* position: relative; */
+    /* filter: grayscale(100%);*/
 }
 
+
 .coverButton {
-    color: #ffed00;
+    
     position: absolute;
     text-decoration: none;
     font-size: 14px;
@@ -47,6 +49,10 @@ html {
     font-family: DxcRegular;
     letter-spacing: 2px;
     text-transform: uppercase;
+
+    color: black;
+    background: #ffed00;
+    border: 1px solid #ffed00;
 }
 
 .coverButtonAsset {
@@ -66,7 +72,7 @@ html {
 
 .coverHeader {
     color: white;
-    position: absolute;
+    /* position: absolute; */
     font-family: DxcRegular;
     font-size: 30px;
     left: 5%;
@@ -76,7 +82,7 @@ html {
 
 .coverText {
     color: white;
-    position: absolute;
+    /* position: absolute; */
     font-family: DxcRegular;
     font-size: 20px;
     left: 5%;
@@ -87,10 +93,23 @@ html {
 
 a.coverButton:hover {
     color: black;
-    background: #ffed00;
+    background: white;
     border: 1px solid #ffed00;
 }
 
+
+#coverInfo {
+    margin: 2em;
+    height: 130px;
+    top: 18em;
+    background-color: black;
+    opacity: 0.7;
+    position: absolute;
+    /* top: 50%; */
+    /* left: 20px; */
+    padding: 3em;
+
+}
 /* .coverButton {
     background: inherit;
 
@@ -128,11 +147,12 @@ a.coverButton:hover {
 
 .topMenu {
     list-style-type: none;
+    position: absolute;
     margin: 0;
     overflow: hidden;
     background-color: black;
-    z-index: 1000;
-    opacity: 0.8;
+    z-index: 1000000000;
+    /* opacity: 0.8; */
     position: fixed;
     width: 100%;
 }
@@ -205,14 +225,19 @@ svg {
 .teaserGrid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr;
     grid-column-gap: 20px;
+    grid-template-columns: repeat(auto-fill, minmax(1fr));
+    justify-items: center;
+    justify-content: center;
+    text-align-last: center;
+    margin: auto;
 }
 
 .teaserGrid2 {
     display: grid;
     grid-template-columns: 0.5fr 0.5fr;
     grid-template-rows: 1fr;
+    margin: auto;
 }
 
 .teaser h1 {
@@ -238,6 +263,8 @@ svg {
 .teaserFour,
 .teaserFive {
     padding: 60px 20px 20px 0;
+    /*for a smooth transition:*/
+    transition: transform .6s;
 }
 
 .teaserOneImg,
@@ -304,6 +331,9 @@ svg {
 
 .partners {
     display: flex;
+    justify-content: flex-start;
+    /* display: flex; */
+    border-bottom-color: blanchedalmond;
     justify-content: space-around;
 }
 
@@ -410,12 +440,12 @@ form label {
 #checkbox-label {
     font-size: .8em;
     padding: 0;
-    margin: 10px 0 0 0;
+    margin: 10px;
     width: 230px;
 }
 
 #checkbox-input {
-    display: inline;
+    width: 30px;
     margin: 30px 0 0 0;
 }
 
@@ -429,6 +459,8 @@ form label {
     font-family: DxcRegular;
     text-transform: uppercase;
     cursor: pointer;
+    justify-self: center;
+    width: 15em;
 }
 
 .formSubmit:hover {
@@ -442,7 +474,7 @@ form label {
     background-color: black;
     height: auto;
     margin: 10px 450px;
-    border-radius: 5%;
+    /* border-radius: 5%; */
     /* display: grid;
     grid-template-columns: 1fr 50px 1fr; */
 }
@@ -904,6 +936,7 @@ p.databaseText {
 
     .coverButton {
         left: 25%;
+        top: 40%;
     }
 
     .assetLink {
@@ -912,6 +945,12 @@ p.databaseText {
 
     .partnerImage {
         height: 40px;
+    }
+    #formSection {
+        margin: 0;
+    }
+    #coverInfo {
+        top: 5em;
     }
 }
 
@@ -947,6 +986,21 @@ p.databaseText {
         padding: 0;
     }
 
+    .teaserGrid, .teaserGrid2 {
+        grid-template-columns: 1fr;
+    }
+    .teaser, .teaserRow2 {
+        padding: 0;
+    }
+
+    #formSection {
+        margin: 0;
+    }
+    #coverInfo {
+        height: 0;
+        top: 6em;
+        }
+
 }
 
 /* Landscape Mobile*/
@@ -965,6 +1019,20 @@ p.databaseText {
     .coverButton {
         left: 50%;
     }
+
+    .teaserGrid, .teaserGrid2 {
+        grid-template-columns: 1fr;
+    }
+    .teaser, .teaserRow2 {
+        padding: 0;
+    }
+    #formSection {
+        margin: 0;
+    }
+    #coverInfo {
+    height: 0;
+    top: 6em;
+    }
 }
 
 
@@ -975,7 +1043,8 @@ p.databaseText {
 /* FOOTER */
 .footer {
     width: 100%;
-    background: #171717;
+    /* background: #171717; */
+    background-color: black;
     display: block;
     font-family: "DxcRegular";
 }
@@ -988,10 +1057,11 @@ p.databaseText {
     flex-wrap: wrap;
     box-sizing: border-box;
     justify-content: center;
+    place-content: space-around;
 }
 
 .footer-items {
-    width: 25%;
+    width: max-content;
     padding: 10px 10px;
     box-sizing: border-box;
     color: #fff;
@@ -1054,6 +1124,7 @@ ul {
     font-size: 15px;
     letter-spacing: 0.5px;
     line-height: 20px;
+    padding: 0;
 }
 
 ul a {
@@ -1094,3 +1165,15 @@ ul a:hover {
 /* you can toggle the media screen view accordingly by changing the (max-width: px) to your convenience */
 
 /* Thanks to Computer Conversations */
+
+
+/**testing**/
+
+/**on hover icon effetc**/
+
+.teaserOne:hover {
+    transform: scale(1.5);
+}
+.teaserFour:hover {
+    transform: scale(1.5);
+}

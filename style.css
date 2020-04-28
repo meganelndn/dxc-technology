@@ -272,7 +272,7 @@ form {
     justify-content: center;
     display: grid;
     font-family: DxcRegular;
-    padding: 270px;
+    padding: 60px;
 }
 
 form input {
@@ -334,16 +334,10 @@ form label {
 #formSection {
     background-color: black;
     height: auto;
-    display: grid;
-    grid-template-columns: 1fr 50px 1fr;
-}
-
-
-.formImage {
-    background: url(images/asset4.png);
-    background-repeat: no-repeat;
-    background-size: contain;
-    background-repeat: right;
+    margin: 20px 450px;
+    border-radius: 5%;
+    /* display: grid;
+    grid-template-columns: 1fr 50px 1fr; */
 }
 
 /*--------------------------- ASSETS PAGE ----------------------------------*/
@@ -361,11 +355,12 @@ form label {
     grid-area: text1;
     color: white;
 }
+
 #sections .sectionOne {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon1 title1"
-    "icon1 text1";
+        "icon1 text1";
     /* background-color: lightgray; */
     background-color: black;
     padding: 30px;
@@ -387,11 +382,12 @@ form label {
     grid-area: text2;
     color: black;
 }
+
 #sections .sectionTwo {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title2 icon2"
-    "text2 icon2";
+        "text2 icon2";
     padding: 30px;
     /* background-color: darkgrey; */
     background-color: white;
@@ -416,11 +412,12 @@ form label {
 .sectionText3 {
     grid-area: text3;
 }
+
 #sections .sectionThree {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon3 title3"
-    "icon3 text3";
+        "icon3 text3";
     grid-template-rows: min-content;
     padding: 30px;
     background-color: grey;
@@ -441,11 +438,12 @@ form label {
 .sectionText4 {
     grid-area: text4;
 }
+
 #sections .sectionFour {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "title4 icon4"
-    "text4 icon4";
+        "text4 icon4";
     padding: 30px;
     background-color: lightgray;
 
@@ -470,11 +468,12 @@ form label {
 .sectionText5 {
     grid-area: text5;
 }
+
 #sections .sectionFive {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-areas: "icon5 title5"
-    "icon5 text5";
+        "icon5 text5";
     padding: 30px;
     background-color: darkgrey;
 
@@ -486,6 +485,7 @@ form label {
     width: 220px;
     height: 220px;
 }
+
 /*----------------------------------sections styling---------------------------------*/
 
 /*title*/
@@ -509,6 +509,7 @@ form label {
 section {
     height: 20vh;
 }
+
 /*----------------------------------grahic database---------------------------------*/
 
 .databaseText {
@@ -532,17 +533,19 @@ section {
     grid-gap: 5em;
     margin: 8em;
 }
+
 /*advantages*/
 .advantages {
     border: 1px solid black;
     padding: 3em;
 }
+
 .advTitle {
     color: black;
     font-family: "DxcRegular";
     font-size: 20px;
     text-align: center;
-    
+
 }
 
 .advText {
@@ -550,12 +553,14 @@ section {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+
 /*fetaures*/
 .features {
     border: 1px solid black;
     padding: 3em;
 }
-.featTitle{
+
+.featTitle {
     color: black;
     font-family: "DxcRegular";
     font-size: 20px;
@@ -567,6 +572,7 @@ section {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

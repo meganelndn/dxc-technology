@@ -447,6 +447,12 @@ form label {
     grid-template-columns: 1fr 50px 1fr; */
 }
 
+
+/*validation*/
+
+.hideCheckError {
+    display: none;
+}
 /*--------------------------- ASSETS PAGE ----------------------------------*/
 /*------------1------------*/
 .icon1 {
@@ -679,7 +685,39 @@ section {
     font-family: "DxcRegular";
     font-size: 16px;
 }
+/*--------------------------------------MODAL----------------------------------------*/
 
+.modalBackground {
+    display: none;
+    position: fixed;
+    z-index: 10000000;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.3);
+}
+
+.modalContent {
+    margin: 10% auto;
+    width: 30%;
+    padding: 10px;
+    box-shadow: 0 3px 7px rgba(0,0,0,.25);
+    background-color: white;
+    justify-items: center;
+    align-items: center;
+    display: grid;
+}
+
+.modalContent p {
+    display: block;
+    color: black;
+}
+
+.showModal {
+    display: block;
+}
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {

@@ -192,30 +192,112 @@ svg {
     height: 100%;
 }
 
+/* ---------------------------------teaser section-------------------------------------- */
+.teaser {
+    font-family: DxcBold;
+    padding: 50px 100px;
+}
+
+.teaserGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 1fr;
+    grid-column-gap: 20px;
+}
+
+.teaser h1 {
+    text-align: center;
+}
+
+.teaser h3 {
+    font-family: DxcRegular;
+    font-size: 24px;
+    text-align: center;
+    /* display: flex;
+    justify-self: flex-start;
+    align-self: flex-end; */
+}
+
+.teaser img {
+    display: block;
+    left: 0;
+    right: 0;
+}
+
+.teaserOne,
+.teaserTwo,
+.teaserThree {
+    padding: 60px 20px 20px 0;
+}
+
+.teaserOneImg,
+.teaserTwoImg,
+.teaserThreeImg {
+    display: flex;
+    justify-content: center;
+}
+
+.teaserOne img {
+    width: 100px;
+    height: 100px;
+}
+
+.teaserTwo img {
+    width: 100px;
+    height: 100px;
+}
+
+.teaserThree img {
+    width: 120px;
+    height: 120px;
+}
+
+.middleButton {
+    display: flex;
+    justify-content: center;
+}
+
+#middleButton {
+    color: black;
+    text-decoration: none;
+    font-size: 14px;
+    padding: 25px 70px;
+    background: #ffed00;
+    font-family: DxcRegular;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 50px;
+}
+
+#middleButton:hover {
+    background-color: white;
+    border: 3px solid #ffed00;
+    padding: 25px 70px;
+}
+
 /* ---------------------------------partners-------------------------------------- */
 
 .partners {
     display: flex;
     justify-content: space-around;
-
 }
 
 .partnerImage {
-    height: 80px;
+    height: 60px;
     width: auto;
-    padding: 30px 16px;
+    padding: 25px;
 }
 
-.partnerImage:first-child:hover {
-    border-bottom: solid 6px #d2303a;
+.partnerImage:first-child {
+    border-bottom: solid 5px #d2303a;
 }
 
-.partnerImage:nth-child(2):hover {
-    border-bottom: solid 6px #2373ba;
+.partnerImage:nth-child(2) {
+    border-bottom: solid 5px #2373ba;
 }
 
-.partnerImage:nth-child(3):hover {
-    border-bottom: solid 6px #F1C911;
+.partnerImage:nth-child(3) {
+    border-bottom: solid 5px #F1C911;
 }
 
 /* ---------------------------------FORM-------------------------------------- */
@@ -334,7 +416,7 @@ form label {
 #formSection {
     background-color: black;
     height: auto;
-    margin: 20px 450px;
+    margin: 10px 450px;
     border-radius: 5%;
     /* display: grid;
     grid-template-columns: 1fr 50px 1fr; */

@@ -35,6 +35,14 @@ html {
     /* filter: grayscale(100%);*/
 }
 
+.coverImageAsset {
+    background-image: url(images/data.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    height: 825px;
+}
 
 .coverButton {
     position: absolute;
@@ -498,9 +506,13 @@ form label {
     box-shadow: 3px 3px 5px 6px #ccc;
 }
 
-/* #cards .cardFive {
-    grid-area: five;
-} */
+#cards .cardOne:hover,
+#cards .cardTwo:hover,
+#cards .cardThree:hover,
+#cards .cardFour:hover,
+#cards .cardFive:hover {
+    transform: scale(1.1);
+}
 
 #cards .cardOneImg,
 #cards .cardTwoImg,
@@ -630,14 +642,24 @@ form label {
     margin-right: 10px;
 }
 
+#databaseImg {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-areas:
+        "databaseImage databaseText";
+}
+
 .databaseImage {
-    width: 100%;
+    grid-area: databaseImage;
+    width: 90%;
     height: auto;
+    padding: 110px 70px;
 }
 
 p.databaseText {
+    grid-area: databaseText;
     text-align: justify;
-    margin-top: 70px;
+    padding: 130px 100px;
     letter-spacing: .2px;
 }
 
@@ -654,7 +676,7 @@ p.databaseText::before {
 }
 
 /*----------------------------------grahic database---------------------------------*/
-
+/* 
 .databaseText {
     color: black;
     font-family: "DxcRegular";
@@ -666,7 +688,7 @@ p.databaseText::before {
     display: flex;
     flex-direction: column;
     margin: 15rem;
-}
+} */
 
 /*---------------------------------advantages and features-----------------------------*/
 /*overall*/
@@ -979,18 +1001,20 @@ p {
 
 /**on hover icon effetc**/
 
-.teaserOne:hover {
-    transform: scale(1.5);
-}
-
-.teaserFour:hover {
+.teaserOne:hover,
+.teaserTwo:hover,
+.teaserThree:hover,
+.teaserFour:hover,
+.teaserFive:hover {
     transform: scale(1.5);
 }
 
 /* ---------------------------------RESPONSIVE-------------------------------------- */
 /* For tablets: */
 @media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-    .coverImage {
+
+    .coverImage,
+    .coverImageAsset {
         height: 500px;
     }
 
@@ -1095,7 +1119,8 @@ p {
         margin: 20px;
     }
 
-    .coverImage {
+    .coverImage,
+    .coverImageAsset {
         width: 375px;
         height: 664px;
     }

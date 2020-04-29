@@ -23,7 +23,7 @@ function verifyUser(){
     console.log(window.location.pathname)
 
     //User comes from the INDEX page
-    if (window.location.pathname == "/index.html" && "userName" in localStorage){
+    if (window.location.pathname.includes("index.html") && "userName" in localStorage){
         console.log("there IS a user name")
         //1.add modal
         document.querySelector(".modalBackground").classList.add("showModal");
@@ -33,7 +33,7 @@ function verifyUser(){
         )}, 100);
         //set timeOut
         setTimeout((e)=>{(
-            location.replace("asset.html")
+        window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html");
             //add Button with option to close and go back to index
 
         )}, 5000)
@@ -42,10 +42,10 @@ function verifyUser(){
     } 
     
     //User comes from the ASSET page
-    else if (window.location.pathname == "/asset.html" && !("userName" in localStorage)){
+    else if (window.location.pathname.includes("asset.html") && !("userName" in localStorage)){
         console.log("there is NOT a user name")
         //send user back to Index
-        location.replace("/index.html#formSection");
+        window.location.replace("https://pbstyle.dk/3sem/dxc/index.html#formSection");
     }
    
 

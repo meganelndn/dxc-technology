@@ -37,14 +37,13 @@ html {
 
 
 .coverButton {
-
     position: absolute;
     text-decoration: none;
     font-size: 14px;
     padding: 18px 28px;
     border: solid 1px #ffed00;
-    top: 65%;
-    left: 10.5%;
+    top: 68%;
+    left: 11.2%;
     transform: translate(-50%, -50%);
     font-family: DxcRegular;
     letter-spacing: 2px;
@@ -53,21 +52,6 @@ html {
     color: black;
     background: #ffed00;
     border: 1px solid #ffed00;
-}
-
-.coverButtonAsset {
-    color: #ffed00;
-    position: absolute;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 18px 28px;
-    border: solid 1px #ffed00;
-    top: 75%;
-    left: 10.5%;
-    transform: translate(-50%, -50%);
-    font-family: DxcRegular;
-    letter-spacing: 2px;
-    text-transform: uppercase;
 }
 
 .coverHeader {
@@ -100,7 +84,8 @@ a.coverButton:hover {
 
 #coverInfo {
     margin: 2em;
-    height: 130px;
+    height: 200px;
+    width: 500px;
     top: 18em;
     background-color: black;
     opacity: 0.7;
@@ -110,39 +95,6 @@ a.coverButton:hover {
     padding: 3em;
 
 }
-
-/* .coverButton {
-    background: inherit;
-
-    svg {
-        height: 45px;
-        left: 0;
-        position: absolute;
-        top: 0;
-        width: 100%;
-    }
-
-    rect {
-        fill: none;
-        stroke: #ffed00;
-        stroke-width: 2;
-        stroke-dasharray: 422, 0;
-        transition: all 0.35s linear;
-    }
-}
-
-.coverButton:hover {
-    background: inherit;
-    font-weight: 900;
-    letter-spacing: 1px;
-
-    rect {
-        stroke-width: 5;
-        stroke-dasharray: 15, 310;
-        stroke-dashoffset: 48;
-        transition: all 1.35s cubic-bezier(0.19, 1, 0.22, 1);
-    }
-} */
 
 /* --------------------------------- menu-------------------------------------- */
 
@@ -614,8 +566,20 @@ form label {
     font-family: "DxcRegular";
     font-size: 16px;
     text-align: justify;
-    margin: 20px 10px 0 200px;
+    margin: 20px 10px 0 150px;
     padding: 5px;
+}
+
+.featureSection p::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(icons/checkbox.png);
+    background-size: cover;
+    padding: 5px;
+    margin-right: 10px;
 }
 
 .featureImg,
@@ -655,14 +619,39 @@ form label {
     padding: 5px;
 }
 
+.advantageSection p::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(icons/arrow.png);
+    background-size: cover;
+    padding: 1px;
+    margin-right: 10px;
+}
+
 .databaseImage {
-    width: auto;
+    width: 100%;
     height: auto;
 }
 
 p.databaseText {
     text-align: justify;
-    margin-top: 50px;
+    margin-top: 70px;
+    letter-spacing: .2px;
+}
+
+p.databaseText::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(icons/arrow.png);
+    background-size: cover;
+    padding: 1px;
+    margin-right: 10px;
 }
 
 /*----------------------------------grahic database---------------------------------*/
@@ -743,10 +732,11 @@ p.databaseText {
 }
 
 .modalContent {
+    font-family: "DxcRegular";
     margin: 10% auto;
     width: 30%;
-    padding: 10px;
-    box-shadow: 0 3px 7px rgba(0, 0, 0, .25);
+    padding: 30px 20px;
+    box-shadow: 0 3px 7px rgba(0, 0, 0, .4);
     background-color: white;
     justify-items: center;
     align-items: center;
@@ -756,6 +746,14 @@ p.databaseText {
 .modalContent p {
     display: block;
     color: black;
+    margin: 20px;
+}
+
+button.signOutModal {
+    background-color: #ffed00;
+    border: none;
+    padding: 20px;
+    cursor: pointer;
 }
 
 .showModal {
@@ -1047,11 +1045,11 @@ ul a:hover {
 .footerAsset {
     color: white;
     background-color: black;
+    font-family: "DxcRegular";
 }
 
 .inner-footerAsset {
     display: flex;
-    /*     flex-wrap: ; */
     box-sizing: border-box;
     justify-content: center;
     place-content: space-around;
@@ -1059,18 +1057,65 @@ ul a:hover {
 
 .footer-infoAsset h2,
 p {
-    font-family: "DxcRegular";
     font-size: 16px;
     text-align: center;
     padding: 0;
 }
 
+.footer-infoAsset h2 {
+    font-size: 28px;
+    text-align: left;
+    margin-left: 13px;
+}
+
+.footer-infoAsset {
+    padding: 70px;
+}
+
+.footer-infoAsset .facebookIcon,
+.footer-infoAsset .twitterIcon,
+.footer-infoAsset .linkedinIcon {
+    margin: 45px 9px 0 4px;
+    text-decoration: none;
+}
+
+.footer-infoAsset img {
+    padding-left: 10px;
+}
 
 .footer-itemsAsset {
     width: fit-content;
     color: white;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 0.5fr 0.5fr;
+    padding-top: 50px;
+}
+
+.footer-itemsAsset h4 {
+    font-size: 26px;
+    text-align: start;
+    margin: 40px 100px;
+}
+
+.footer-itemsAsset h4::before {
+    content: "";
+    display: inline-block;
+    vertical-align: middle;
+    width: 1em;
+    height: 1em;
+    background: url(images/circle.png);
+    background-size: cover;
+    /*     padding: 3px; */
+    margin: 0 10px 10px 0;
+}
+
+.footer-itemsAsset p.link {
+    padding: 0 95px;
+}
+
+.footer-itemsAsset p.text {
+    padding: 0 95px 70px 95px;
 }
 
 .footer-infoAsset img {

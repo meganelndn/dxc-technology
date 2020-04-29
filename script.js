@@ -11,7 +11,11 @@ window.addEventListener("load", init);
 
 function init() {
     
-    setUpForm();
+    const form = document.querySelector("form");
+    if (form) {
+        setUpForm();
+    }
+    
     verifyUser();
 }
 
@@ -36,14 +40,14 @@ function verifyUser() {
         }, 100);
         //set timeOut
         setTimeout((e) => {
-            (
+            
                 //for dev mode:
-                window.location.replace("asset.html")
+                window.location = "asset.html";
                 //when upload:
                 //window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
                 //add Button with option to close and go back to index
 
-            )
+            
         }, 5000)
         //2.redirect to asset
 
@@ -56,7 +60,7 @@ function verifyUser() {
         //when upload:
         //window.location.replace("https://pbstyle.dk/3sem/dxc/index.html#formSection");
         //when dev mode:
-        window.location.replace("/index.html#formSection");
+        window.location.replace("index.html#formSection");
     }
 
 
@@ -70,9 +74,10 @@ function setUpForm() {
     window.form = form;
     window.elements = elements;
 
-    console.log(document.querySelector("#formSection"))
+    //console.log(document.querySelector("#formSection"))
     //1. grab the form
     const form = document.querySelector("form");
+    
     console.log(form.elements)
     const elements = form.elements;
     console.log(elements)
@@ -111,10 +116,10 @@ function setUpForm() {
 
 
             //1- info is added to localStoage for later
-            localStorage.setItem("userName", form.elements.fullName.value);
+            //localStorage.setItem("userName", form.elements.fullName.value);
 
             //2- if form is valid user is sent to Asset
-            location.replace("asset.html");
+           // 
         } else {
             formElements.forEach((el) => {
                 if (!el.checkValidity()) {
@@ -148,7 +153,7 @@ function postSubscription(userInfo) {
             body: postData,
         })
         .then((res) => res.json())
-        .then((data) => console.log(data));
+        .then((data) => {location.replace("asset.html")});
 
 }
 

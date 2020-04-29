@@ -33,7 +33,10 @@ function verifyUser(){
         )}, 100);
         //set timeOut
         setTimeout((e)=>{(
-        window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
+            //for dev mode:
+            window.location.replace("asset.html")
+        //when upload:
+        //window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
             //add Button with option to close and go back to index
 
         )}, 5000)
@@ -45,7 +48,10 @@ function verifyUser(){
     else if (window.location.pathname.includes("asset.html") && !("userName" in localStorage)){
         console.log("there is NOT a user name")
         //send user back to Index
-        window.location.replace("https://pbstyle.dk/3sem/dxc/index.html#formSection");
+        //when upload:
+        //window.location.replace("https://pbstyle.dk/3sem/dxc/index.html#formSection");
+        //when dev mode:
+        window.location.replace("/index.html#formSection");
     }
    
 

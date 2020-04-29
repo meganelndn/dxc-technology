@@ -18,34 +18,38 @@ function init() {
 //--------------------------------- newUser -----------------------------------------//
 
 
-function verifyUser(){
+function verifyUser() {
 
     console.log(window.location.pathname)
 
     //User comes from the INDEX page
-    if (window.location.pathname.includes("index.html") && "userName" in localStorage){
+    if (window.location.pathname.includes("index.html") && "userName" in localStorage) {
         console.log("there IS a user name")
         //1.add modal
         document.querySelector(".modalBackground").classList.add("showModal");
         //option to sign out
-        document.querySelector(".signOutModal").addEventListener("click", (e)=> {(
-            localStorage.removeItem("userName")
-        )}, 100);
+        document.querySelector(".signOutModal").addEventListener("click", (e) => {
+            (
+                localStorage.removeItem("userName")
+            )
+        }, 100);
         //set timeOut
-        setTimeout((e)=>{(
-            //for dev mode:
-            window.location.replace("asset.html")
-        //when upload:
-        //window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
-            //add Button with option to close and go back to index
+        setTimeout((e) => {
+            (
+                //for dev mode:
+                window.location.replace("asset.html")
+                //when upload:
+                //window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
+                //add Button with option to close and go back to index
 
-        )}, 5000)
+            )
+        }, 5000)
         //2.redirect to asset
-      
-    } 
-    
+
+    }
+
     //User comes from the ASSET page
-    else if (window.location.pathname.includes("asset.html") && !("userName" in localStorage)){
+    else if (window.location.pathname.includes("asset.html") && !("userName" in localStorage)) {
         console.log("there is NOT a user name")
         //send user back to Index
         //when upload:
@@ -53,7 +57,7 @@ function verifyUser(){
         //when dev mode:
         window.location.replace("/index.html#formSection");
     }
-   
+
 
 }
 
@@ -74,9 +78,9 @@ function setUpForm() {
     //3.novalidate
     form.setAttribute("novalidate", true);
 
-       //remove the error for the Checkbox
-       //console.log(document.querySelector("#checkbox-label p"));
-       document.querySelector("#checkbox-label p").classList.add("hideCheckError")
+    //remove the error for the Checkbox
+    //console.log(document.querySelector("#checkbox-label p"));
+    document.querySelector("#checkbox-label p").classList.add("hideCheckError")
 
     //2. send basic structure
     form.addEventListener("submit", (e) => {
@@ -85,13 +89,13 @@ function setUpForm() {
         //1.select all inputs
         const formElements = form.querySelectorAll("input");
 
-     
+
 
         //2.loop through them and check if are valid or not
         formElements.forEach((el) => {
             el.classList.remove("invalid");
         })
-        
+
         //console.log("submit form")
         //3. clicked on submit, check validity
         if (form.checkValidity()) {
@@ -101,8 +105,8 @@ function setUpForm() {
                 country: form.elements.country.value,
                 jobTitle: form.elements.jobTitle.value
             });
-            
-            
+
+
             //1- info is added to localStoage for later
             localStorage.setItem("userName", form.elements.fullName.value);
 
@@ -112,11 +116,11 @@ function setUpForm() {
             formElements.forEach((el) => {
                 if (!el.checkValidity()) {
                     el.classList.add("invalid");
-                    if(form.elements.checkbox.checkValidity() === false){
-                            //show Error
-                            document.querySelector("#checkbox-label p").classList.remove("hideCheckError");
+                    if (form.elements.checkbox.checkValidity() === false) {
+                        //show Error
+                        document.querySelector("#checkbox-label p").classList.remove("hideCheckError");
                     } else {
-                            document.querySelector("#checkbox-label p").classList.add("hideCheckError");
+                        document.querySelector("#checkbox-label p").classList.add("hideCheckError");
                     }
                 }
             })
@@ -150,12 +154,14 @@ function postSubscription(userInfo) {
 //********************************* DESIGN ********************************************//
 
 // When the user scrolls down 50px from the top of the document, resize the header's font size
-window.onscroll = function() {scrollFunction()};
+window.onscroll = function () {
+    scrollFunction()
+};
 
 function scrollFunction() {
-  if (document.documentElement.scrollTop > 600) {
-    document.querySelector("header").style.opacity = "0.8";
-  } else {
-    document.querySelector("header").style.opacity = "1";
-  }
+    if (document.documentElement.scrollTop > 600) {
+        document.querySelector("header").style.opacity = "0.8";
+    } else {
+        document.querySelector("header").style.opacity = "1";
+    }
 }

@@ -45,7 +45,7 @@ html {
 }
 
 .coverButton {
-    position: absolute;
+    position: relative;
     text-decoration: none;
     font-size: 14px;
     padding: 18px 28px;
@@ -1026,7 +1026,7 @@ p {
 
     .coverButton {
         left: 15.5%;
-        top: 50%;
+        top: 68%;
     }
 
     .assetLink {
@@ -1100,6 +1100,7 @@ p {
 
     #databaseImg {
         margin: 5rem;
+        display: block;
     }
 }
 
@@ -1107,7 +1108,7 @@ p {
 /* Portrait Mobile */
 @media only screen and (min-device-width: 320px) and (max-device-width: 480px) and (-webkit-min-device-pixel-ratio: 2) and (orientation: portrait) {
     .topMenu {
-        width: 375px;
+        width: 100%;
         height: 95px;
     }
 
@@ -1119,16 +1120,21 @@ p {
         margin: 20px;
     }
 
-    .coverImage,
+    
     .coverImageAsset {
-        width: 375px;
+        width: auto;
+        height: 664px;
+    }
+    .coverImage{
+        width: 100%;
         height: 664px;
     }
 
     #coverInfo {
         top: 10em;
-        width: 270px;
+        width: auto;
         height: 120px;
+        padding: 1em;
     }
 
     .coverHeader {
@@ -1252,6 +1258,15 @@ p {
 
     #databaseImg {
         margin: 2rem;
+        display: block;
+    }
+
+    .databaseImage {
+        width: 100%;
+        padding: 0;
+    }
+    p.databaseText {
+        padding: 0;
     }
 
     .footerAsset {
@@ -1309,6 +1324,16 @@ p {
         padding: 10px;
         font-size: 9px;
     }
+
+    .teaserOne,
+.teaserTwo,
+.teaserThree,
+.teaserFour,
+.teaserFive {
+    padding: 0;
+
+}
+
 }
 
 

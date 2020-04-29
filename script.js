@@ -1,24 +1,27 @@
 //global
 
-import {
+/* import {
     endpoint,
     apiKey
-} from "./modules/settings";
+} from "./modules/settings"; */
+
+const endpoint = "https://frontend2020-db3c.restdb.io/";
+const apiKey = "5e95774d436377171a0c233c";
 
 window.addEventListener("load", init);
 
 //--------------------------------- init -----------------------------------------//
 
 function init() {
-    
+    //console.log(document.querySelector("form"))
     setUpForm();
-    verifyUser();
+    //verifyUser();
 }
 
 
 //--------------------------------- newUser -----------------------------------------//
 
-
+/* 
 function verifyUser(){
 
     console.log(window.location.pathname)
@@ -56,23 +59,26 @@ function verifyUser(){
     }
    
 
-}
+} */
 
 
 
 //--------------------------------- form -----------------------------------------//
 function setUpForm() {
-    
-    window.form = form;
-    window.elements = elements;
 
-    console.log(document.querySelector("#formSection"))
     //1. grab the form
     const form = document.querySelector("form");
-    console.log(form.elements)
-    const elements = form.elements;
-    console.log(elements)
+    window.form = form;
+    
 
+    const elements = form.elements;
+    
+    window.elements = elements;
+    //console.log(elements)
+    //console.log(form.elements)
+  
+    
+    
 
     //3.novalidate
     form.setAttribute("novalidate", true);
@@ -86,7 +92,7 @@ function setUpForm() {
         e.preventDefault();
 
         //1.select all inputs
-        const formElements = form.querySelectorAll("input");
+        const formElements = document.querySelectorAll("input");
 
      
 
@@ -107,7 +113,7 @@ function setUpForm() {
             
             
             //1- info is added to localStoage for later
-            localStorage.setItem("userName", form.elements.fullName.value);
+            //localStorage.setItem("userName", form.elements.fullName.value);
 
             //2- if form is valid user is sent to Asset
             location.replace("asset.html");

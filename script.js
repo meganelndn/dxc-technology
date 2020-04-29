@@ -33,7 +33,7 @@ function verifyUser(){
         )}, 100);
         //set timeOut
         setTimeout((e)=>{(
-        window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html");
+        window.location.replace("https://pbstyle.dk/3sem/dxc/asset.html")
             //add Button with option to close and go back to index
 
         )}, 5000)
@@ -70,7 +70,7 @@ function setUpForm() {
 
        //remove the error for the Checkbox
        //console.log(document.querySelector("#checkbox-label p"));
-       document.querySelector("#checkbox-label p").classList.add("hideCheckError");
+       document.querySelector("#checkbox-label p").classList.add("hideCheckError")
 
     //2. send basic structure
     form.addEventListener("submit", (e) => {

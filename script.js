@@ -10,8 +10,9 @@ window.addEventListener("load", init);
 //--------------------------------- init -----------------------------------------//
 
 function init() {
-    verifyUser();
+    
     setUpForm();
+    verifyUser();
 }
 
 
@@ -61,15 +62,17 @@ function verifyUser(){
 
 //--------------------------------- form -----------------------------------------//
 function setUpForm() {
+    
+    window.form = form;
+    window.elements = elements;
 
+    console.log(document.querySelector("#formSection"))
     //1. grab the form
     const form = document.querySelector("form");
-    //console.log(form.elements)
+    console.log(form.elements)
     const elements = form.elements;
     console.log(elements)
 
-    window.form = form;
-    window.elements = elements;
 
     //3.novalidate
     form.setAttribute("novalidate", true);

@@ -11,6 +11,7 @@ window.addEventListener("load", init);
 
 function init() {
     
+    //if there is a form, fire setUpForm, otherwise, user is kicked to index.html(verifyUser)
     const form = document.querySelector("form");
     if (form) {
         setUpForm();
@@ -60,7 +61,7 @@ function verifyUser() {
         //when upload:
         //window.location.replace("https://pbstyle.dk/3sem/dxc/index.html#formSection");
         //when dev mode:
-        window.location.replace("index.html#formSection");
+        window.location.replace("index.html");
     }
 
 
@@ -116,7 +117,7 @@ function setUpForm() {
 
 
             //1- info is added to localStoage for later
-            //localStorage.setItem("userName", form.elements.fullName.value);
+            localStorage.setItem("userName", form.elements.fullName.value);
 
             //2- if form is valid user is sent to Asset
            // 
